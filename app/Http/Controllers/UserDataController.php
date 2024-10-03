@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\UserData;
 use App\Http\Requests\StoreUserDataRequest;
 use App\Http\Requests\UpdateUserDataRequest;
+use Illuminate\Http\Request;
 
 class UserDataController extends Controller
 {
@@ -19,9 +20,9 @@ class UserDataController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+
     }
 
     /**

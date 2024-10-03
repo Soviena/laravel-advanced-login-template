@@ -19,8 +19,8 @@ return new class extends Migration
             $table->date('date_of_birth');
             $table->enum('gender',['Male','Female']);
             $table->string('phone_number');
-            $table->string('profile_picture');
-            $table->string('cover_picture');
+            $table->string('profile_picture')->nullable();
+            $table->string('cover_picture')->nullable();
             $table->timestamps();
         });
     }

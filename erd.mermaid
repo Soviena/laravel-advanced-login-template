@@ -1,0 +1,38 @@
+---
+title: Simple Login
+---
+erDiagram
+    USER_DATA ||--||USER : has
+    USER ||--o{ OLD_PASSWORD : have
+
+    USER_DATA {
+        serial id
+        int user_id
+        string first_name
+        string last_name
+        date date_of_birth
+        string gender
+        string phone_number
+        string profile_picture
+        string cover_picture
+        datetime created_at
+        datetime updated_at
+    }
+
+    USER {
+        serial id
+        string username
+        string email
+        string password
+        datetime created_at
+        datetime updated_at
+    }
+
+    OLD_PASSWORD {
+        serial id
+        int user_id
+        string password
+        datetime created_at
+        datetime updated_at
+    }
+

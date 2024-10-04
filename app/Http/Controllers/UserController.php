@@ -19,16 +19,15 @@ class UserController extends Controller
         }
         $users = new User;
         $users->username = $request->username;
+        $users->first_name = $request->first_name;
+        $users->last_name = $request->last_name;
+        $users->gender = $request->gender;
+        $users->phone_number = $request->phone_number;
         $users->email = strtolower($request->email);
-        $users->tanggal_lahir = $request->tanggal_lahir;
+        $users->date_of_birth = $request->tanggal_lahir;
         $users->password = $request->password;
-        if ($request->hasFile('file_profile')) {
-            $file_profile = $request->file('file_profile');
-            $file_profile->storeAs('public/uploaded/user/',$file_profile->hashName());
-            $users->profilepic = $file_profile->hashName();
-        }
         $users->save();
         $users->sendEmailVerificationNotification();
-        return redirect()->route('manageUser');
+        return redirect()->route('login');
     }
 }

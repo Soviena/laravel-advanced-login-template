@@ -61,6 +61,12 @@ class UserController extends Controller
         return view('register');
     }
 
+    public function profile(Request $request){
+        $user = Auth::user()->load('user_data');
+
+        return view('profile', compact('user'));
+    }
+
     public function logOut(Request $request){
         Auth::logout();
         return redirect('/login')->with('success', 'You have been logged out.');

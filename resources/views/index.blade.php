@@ -12,7 +12,7 @@
                     </h2>
                 </div>
                 <div class="row">
-                    <h3 style="color:#1A4980"> Name</h3>
+                    <h3 style="color:#1A4980">{{ $user->user_data->last_name }}</h3>
                 </div>
             </div>
             <div class="col text-end">

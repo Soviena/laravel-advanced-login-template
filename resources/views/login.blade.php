@@ -75,7 +75,7 @@
               <h4 class="mb-2">Prima Vista Solusi</h4>
               <p class="mb-4">Silahkan Sign in untuk melanjutkan</p>
 
-              <form id="formAuthentication" class="mb-3" action="" method="POST">
+              <form id="formAuthentication" class="mb-3" action="{{ route('loginFunc') }}" method="POST">
                 @csrf
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>

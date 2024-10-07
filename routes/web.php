@@ -1,18 +1,27 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\EmailVerificationController;
 
-Route::get('/', function () {
-    return view('index');
-});
+// Show email verification notice
+Route::get('/email/verify/notice', [EmailVerificationController::class, 'showNotice'])->name('verification.notice');
+
+// Email verification confirmation
+Route::get('/email/verify/{id}/{hash}', [EmailVerificationController::class, 'verify'])->name('verification.verify');
+
+// Resend email verification link
+Route::post('/email/verify/resend', [EmailVerificationController::class, 'resend'])->middleware(['auth'])->name('verification.send');
 
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/', [UserController::class, 'index'])->name('index');
 
+Route::get('/login', [UserController::class, 'login'])->name('login');
+Route::get('/logout', [UserController::class, 'logOut'])->name('logout');
 
-Route::get('/register', function () {
-    return view('register');
-});
+Route::post('/login', [UserController::class, 'loginFunc'])->name('loginFunc');
+
+Route::get('/register', [UserController::class, 'register'])->name('register');
+
+Route::post('/register',  [UserController::class, 'create'])->name('createUser');
 

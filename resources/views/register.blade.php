@@ -64,7 +64,8 @@
               <h5 class="mb-0">Register</h5>
             </div>
             <div class="card-body">
-              <form>
+              <form action="{{ route('createUser') }}" method="POST">
+                @csrf
                 <div class="mb-6">
                   <label class="form-label" for="basic-icon-default-fullname">First Name</label>
                   <div class="input-group input-group-merge">
@@ -75,7 +76,7 @@
                 <div class="mb-6">
                   <label class="form-label" for="basic-icon-default-fullname">Last Name</label>
                   <div class="input-group input-group-merge">
-                    <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
+                    <span id="basic-icon-default-fullname2" class="input-group-text"><i class=""></i></span>
                     <input name="last_name" type="text" class="form-control" id="basic-icon-default-fullname" placeholder="Doe" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2">
                   </div>
                 </div>
@@ -105,8 +106,8 @@
                 <div class="mb-6">
                   <label class="form-label" for="basic-icon-default-fullname">Password</label>
                   <div class="input-group input-group-merge">
-                    <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
-                    <input name="password" type="password" class="form-control" id="basic-icon-default-fullname" placeholder="John" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2">
+                    <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-key"></i></span>
+                    <input name="password" type="password" class="form-control" id="basic-icon-default-fullname">
                   </div>
                 </div>
                 <div class="mb-6">

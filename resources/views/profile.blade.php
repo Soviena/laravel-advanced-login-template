@@ -12,6 +12,9 @@
           <form action="{{route('editUser',Auth::user()->id)}}" method="put" enctype="multipart/form-data" id="formSubmit">
             @csrf
             <div class="card-body">
+            <div>
+                <h3>{{$user->user_data->first_name}} {{$user->user_data->last_name}}</h3>
+            </div>
               <div class="d-flex align-items-start align-items-sm-center gap-4">
                 <img src="{{asset('storage/uploaded/user/')}}@if($user->user_data->profile_picture == "")/default.jpeg @endif" id="profilePic" alt="user-avatar" class="d-block rounded" height="100" width="100" id="uploadedAvatar">
                 <div class="button-wrapper">
@@ -33,8 +36,49 @@
             <div class="card-body">
               <div class="row">
                 <div class="mb-3 col-md-6">
-                  <label for="firstName" class="form-label">Nama</label>
-                  <input class="form-control inputControll" readonly type="text" id="firstName" name="name" value="{{Auth::user()->name}}" autofocus="">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input class="form-control inputControll" readonly type="text" id="firstName" name="name" value="{{$user->user_data->first_name}}" autofocus="">
+                </div>
+                <div class="mb-3 col-md-6">
+                  <label for="firstName" class="form-label">Last Name</label>
+                  <input class="form-control inputControll" readonly type="text" id="firstName" name="name" value="{{$user->user_data->last_name}}" autofocus="">
+                </div>
+                <div class="mb-3 col-md-6">
+                  <label for="dob" class="form-label">Date Of Birth</label>
+                  <input class="form-control inputControll" readonly type="date" name="tanggal_lahir" id="lastName" value="{{$user->user_data->date_of_birth}}">
+                </div>
+                <div class="mb-3 col-md-6">
+                  <label for="dob" class="form-label">Phone Number</label>
+                  <input class="form-control inputControll" readonly type="number" name="phone_number" id="lastName" value="{{$user->user_data->phone_number}}">
+                </div>
+              </div>
+              <div class="mt-2">
+                {{-- @if(Auth::user()->email_verified_at == '')
+                  <a type="button" id="verifButton" class="btn btn-warning me-2" href="{{route('resendVerify',Auth::user()->id)}}" onclick="this.classlist.add('disabled')">Kirim Ulang verifikasi email</a>
+                @endif --}}
+                <button type="button" id="editButton" class="btn btn-primary me-2" onclick="editProfil()">Edit</button>
+                <button type="reset" id="cancelButton" class="btn btn-outline-secondary disabled" onclick="cancelEdit()">Cancel</button>
+              </div>
+            </div>
+          </form>
+          <!-- /Account -->
+        </div>
+
+        <div class="card mb-4">
+          <h5 class="card-header">Credential Details</h5>
+          <!-- Account -->
+          <form action="{{route('editUser',Auth::user()->id)}}" method="put" enctype="multipart/form-data" id="formSubmit">
+            @csrf
+            <div class="card-body">
+            <hr class="my-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="mb-3 col-md-6">
+                  <label for="email" class="form-label">Username</label>
+                  <input class="form-control inputControll" readonly type="text" id="email" name="email" value="{{Auth::user()->username}}" placeholder="john.doe@example.com">
+                  @error('email')
+                    <span class="text-danger">{{ $message }}</span>
+                  @enderror
                 </div>
                 <div class="mb-3 col-md-6">
                   <label for="email" class="form-label">E-mail</label>
@@ -44,8 +88,18 @@
                   @enderror
                 </div>
                 <div class="mb-3 col-md-6">
-                  <label for="lastName" class="form-label">Tanggal Lahir</label>
-                  <input class="form-control inputControll" readonly type="date" name="tanggal_lahir" id="lastName" value="{{Auth::user()->tanggal_lahir}}">
+                  <label for="email" class="form-label">New Password</label>
+                  <input class="form-control inputControll" readonly type="password" id="email" name="email">
+                  @error('email')
+                    <span class="text-danger">{{ $message }}</span>
+                  @enderror
+                </div>
+                <div class="mb-3 col-md-6">
+                  <label for="email" class="form-label">Old Password*</label>
+                  <input class="form-control inputControll" readonly required type="password" id="email" name="email">
+                  @error('email')
+                    <span class="text-danger">{{ $message }}</span>
+                  @enderror
                 </div>
               </div>
               <div class="mt-2">

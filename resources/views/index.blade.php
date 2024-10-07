@@ -24,94 +24,20 @@
                 </div>
             </div>
         </div>
-        <div class="card py-4" style="border:2px solid #FA830F !important">
+        <div class="card py-4">
             <div class="container">
-                <h2>Halaman Konfigurasi</h2>
-                <div class="d-flex flex-wrap" id="icons-container">
-                    <div style="width:30%;" class="card icon-card cursor-pointer text-center mb-4 mx-2">
-                        <a href=" " class="btn">
-                            <div class="card-body">
-                                <i class="bx bxs-book-content mb-2"></i>
-                                <p class="icon-name text-capitalize text-truncate mb-0">Daftar Budaya</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div style="width:30%;" class="card icon-card cursor-pointer text-center mb-4 mx-2">
-                        <a href=" " class="btn">
-                            <div class="card-body">
-                                <i class="bx bx-photo-album mb-2"></i>
-                                <p class="icon-name text-capitalize text-truncate mb-0">Aktivitas</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div style="width:30%;" class="card icon-card cursor-pointer text-center mb-4 mx-2">
-                        <a href=" " class="btn">
-                            <div class="card-body">
-                                <i class="bx bx-crown mb-2"></i>
-                                <p class="icon-name text-capitalize text-truncate mb-0">Reward</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div style="width:30%;" class="card icon-card cursor-pointer text-center mb-4 mx-2">
-                        <a href=" " class="btn">
-                            <div class="card-body">
-                                <i class="bx bx-user mb-2"></i>
-                                <p class="icon-name text-capitalize text-truncate mb-0">Manage User</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div style="width:30%;" class="card icon-card cursor-pointer text-center mb-4 mx-2">
-                        <a href=" " class="btn">
-                            <div class="card-body">
-                                <i class="bx bx-envelope mb-2"></i>
-                                <p class="icon-name text-capitalize text-truncate mb-0">Feedback</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div style="width:30%;" class="card icon-card cursor-pointer text-center mb-4 mx-2">
-                        <a href=" " class="btn">
-                            <div class="card-body">
-                                <i class="bx bx-bell mb-2"></i>
-                                <p class="icon-name text-capitalize text-truncate mb-0">Notifikasi</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div style="width:30%;" class="card icon-card cursor-pointer text-center mb-4 mx-2">
-                        <a href=" " class="btn">
-                        <div class="card-body">
-                            <i class="bx bx-book mb-2"></i>
-                            <p class="icon-name text-capitalize text-truncate mb-0">Materi</p>
-                        </div>
-                        </a>
-                    </div>
-                    <div style="width:30%;" class="card icon-card cursor-pointer text-center mb-4 mx-2">
-                        <a href=" " class="btn">
-                            <div class="card-body">
-                                <i class="bx bx-shield mb-2"></i>
-                                <p class="icon-name text-capitalize text-truncate mb-0">Safety Moment</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div style="width:30%;" class="card icon-card cursor-pointer text-center mb-4 mx-2">
-                        <a href=" " class="btn">
-                            <div class="card-body">
-                                <i class="bx bx-bar-chart-alt-2 mb-2"></i>
-                                <p class="icon-name text-capitalize text-truncate mb-0">Kinerja Bulanan</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
 
     <div class="content-backdrop fade"></div>
     <footer class="content-footer footer bg-footer-theme">
-        <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+        {{-- <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
             <div class="mb-2 mb-md-0">
                 <a href="https://admin.sucofindobandung.com/public/storage/assets/manual.pdf" target="_blank" class="footer-link fw-bolder">Klik disini untuk membaca User Manual</a>
             </div>
-        </div>
+        </div> --}}
     </footer>
 </div>
 <script>

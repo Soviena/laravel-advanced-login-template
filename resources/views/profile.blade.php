@@ -9,7 +9,8 @@
         <div class="card mb-4">
           {{-- <h5 class="card-header">Profile Details</h5> --}}
           <!-- Account -->
-          <form action="{{route('editUserData',Auth::user()->id)}}" method="put" enctype="multipart/form-data" id="formSubmit">
+          <form action="{{route('editUserData',Auth::user()->id)}}" method="POST" enctype="multipart/form-data" id="formSubmit">
+            @method('PUT')
             @csrf
             <div class="card-body py-1" id="coverPic" style="background-image: url({{asset('storage/uploaded/user/')}}@if($user->user_data->cover_picture == "")/default_cover.png @endif); background-size:cover">
               <div class="d-flex justify-content-between mb-4" style="margin-top: 15%;">
@@ -87,7 +88,8 @@
         <div class="card mb-4">
           <h5 class="card-header">Credential Details</h5>
           <!-- Account -->
-          <form action="{{route('editUser',Auth::user()->id)}}" method="put" enctype="multipart/form-data" id="formSubmit-credential">
+          <form action="{{route('editUser',Auth::user()->id)}}" method="POST" enctype="multipart/form-data" id="formSubmit-credential">
+            @method('PUT')
             @csrf
             <div class="card-body">
             <hr class="my-0">
@@ -170,6 +172,41 @@
       Email telah diverif
     </div>
   </div>
+  <div
+  class="bs-toast toast fade bg-danger bottom-0 end-0 position-absolute m-5"
+  role="alert"
+  aria-live="assertive"
+  aria-atomic="true"
+  id="generalError"
+>
+  <div class="toast-header">
+    <i class="bx bx-bell me-2"></i>
+    <div class="me-auto fw-semibold">Error</div>
+    <small></small>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    {{session('error')}}
+  </div>
+</div>
+
+<div
+  class="bs-toast toast fade bg-danger bottom-0 end-0 position-absolute m-5"
+  role="alert"
+  aria-live="assertive"
+  aria-atomic="true"
+  id="passwordError"
+>
+  <div class="toast-header">
+    <i class="bx bx-bell me-2"></i>
+    <div class="me-auto fw-semibold">Error</div>
+    <small></small>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    You need to confirm your old password
+  </div>
+</div>
   <div
     class="bs-toast toast fade bg-success bottom-0 end-0 position-absolute m-5"
     role="alert"
@@ -307,6 +344,12 @@
   function editCredential(){
     event.preventDefault();
     if (document.getElementById('editButton-credential').type == 'submit') {
+      let old_password = document.getElementById('old_password');
+      if (old_password.value == '') {
+        successToast = new bootstrap.Toast(document.getElementById('passwordError'));
+        successToast.show();
+        return;
+      }
       document.getElementById('formSubmit-credential').submit();
       return;
     }
@@ -524,6 +567,10 @@ function getImgURL(url, callback){
     @endif
     @if(session('errorVerify'))
       successToast = new bootstrap.Toast(document.getElementById('errorVerify'));
+      successToast.show();
+    @endif
+    @if(session('error'))
+      successToast = new bootstrap.Toast(document.getElementById('generalError'));
       successToast.show();
     @endif
     @if(session('resendSuccess'))

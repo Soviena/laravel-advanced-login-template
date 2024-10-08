@@ -16,7 +16,7 @@ Route::post('/email/verify/resend', [EmailVerificationController::class, 'resend
 Route::group(['middleware' => 'auth'],function () {
     Route::get('/', [UserController::class, 'index'])->name('index');
     Route::get('/profile', [UserController::class, 'profile'])->name('profile');
-    Route::put('/user/{id}', [UserController::class, 'editUser'])->name('editUser');
+    Route::put('/user/{id}', [UserController::class, 'updateUser'])->name('editUser');
     Route::put('/user/{id}/data', [UserController::class, 'editUserData'])->name('editUserData');
 });
 

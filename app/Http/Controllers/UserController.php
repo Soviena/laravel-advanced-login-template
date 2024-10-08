@@ -6,6 +6,7 @@ use App\Models\UserData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
+use App\Models\OldPassword;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -35,6 +36,11 @@ class UserController extends Controller
         $userData->user()->associate($users);
         $userData->save();
         $users->sendEmailVerificationNotification();
+
+        $oldPassword = new OldPassword;
+        $oldPassword->user()->associate($users);
+        $oldPassword->password = $users->password;
+        $oldPassword->save();
         return redirect()->route('login');
     }
 
@@ -59,6 +65,44 @@ class UserController extends Controller
     }
     public function register(Request $request){
         return view('register');
+    }
+
+    public function updateUser(Request $request, $id) {
+        $user = User::findOrFail($id);
+        if (!password_verify($request->old_password,$user->password)) {
+            return back()->with(["error" => "Password lama salah"]);
+        }
+        if ($user->username != $request->username) {
+            $u = DB::table('users')->where('username',$request->username)->first();
+            if($u){
+                return back()->with(["error" => "Username sudah terdaftar coba lagi yang lain!"]);
+            }
+            $user->username = $request->username;
+        }
+        if ($user->email != $request->email) {
+            $u = DB::table('users')->where('email',$request->email)->first();
+            if($u){
+                return back()->with(["error" => "Email sudah terdaftar coba lagi yang lain!"]);
+            }
+            $user->email = strtolower($request->input('email'));
+            $user->email_verified_at = null;
+            $user->sendEmailVerificationNotification();
+        }
+        if ($request->password != '') {
+            $latestPassword = OldPassword::where('user_id',$id)->orderBy('created_at', 'desc')->take(4)->get();
+            foreach ($latestPassword as $key => $value) {
+                if (password_verify($request->password,$value->password)) {
+                    return back()->with(["error" => "Password sudah pernah dipakai"]);
+                }
+            }
+            $user->password = $request->password;
+            $oldPassword = new OldPassword;
+            $oldPassword->user()->associate($user);
+            $oldPassword->password = $user->password;
+            $oldPassword->save();
+        }
+        $user->save();
+        return redirect()->back()->with(["EditSuccess" => "Data diri berhasil diubah"]);
     }
 
     public function profile(Request $request){

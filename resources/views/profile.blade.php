@@ -9,7 +9,7 @@
         <div class="card mb-4">
           {{-- <h5 class="card-header">Profile Details</h5> --}}
           <!-- Account -->
-          <form action="{{route('editUser',Auth::user()->id)}}" method="put" enctype="multipart/form-data" id="formSubmit">
+          <form action="{{route('editUserData',Auth::user()->id)}}" method="put" enctype="multipart/form-data" id="formSubmit">
             @csrf
             <div class="card-body py-1" id="coverPic" style="background-image: url({{asset('storage/uploaded/user/')}}@if($user->user_data->cover_picture == "")/default_cover.png @endif); background-size:cover">
               <div class="d-flex justify-content-between mb-4" style="margin-top: 15%;">
@@ -87,7 +87,7 @@
         <div class="card mb-4">
           <h5 class="card-header">Credential Details</h5>
           <!-- Account -->
-          <form action="{{route('editUser',Auth::user()->id)}}" method="put" enctype="multipart/form-data" id="formSubmit">
+          <form action="{{route('editUser',Auth::user()->id)}}" method="put" enctype="multipart/form-data" id="formSubmit-credential">
             @csrf
             <div class="card-body">
             <hr class="my-0">

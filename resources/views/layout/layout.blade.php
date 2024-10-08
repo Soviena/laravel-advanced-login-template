@@ -69,7 +69,7 @@
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="my-3 mx-auto">
-            <a href=" " class="app-brand-link">
+            <a href=" {{route('index')}} " class="app-brand-link">
                 <img src="{{asset('img/icons/brands/LogoPVS-Warna.png')}}" alt="" srcset="" width="100px">
             </a>
 
@@ -83,7 +83,7 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item @isset($page) @if($page['title'] == 'Dashboard') active @endif @endisset">
-              <a href=" " class="menu-link">
+              <a href=" {{route('index')}} " class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
@@ -146,8 +146,8 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">Name</span>
-                            <small class="text-muted">Admin</small>
+                            <span class="fw-semibold d-block">{{$user->username}}</span>
+                            <small class="text-muted">User</small>
                           </div>
                         </div>
                       </a>

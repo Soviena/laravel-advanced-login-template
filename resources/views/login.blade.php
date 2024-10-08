@@ -60,7 +60,7 @@
         <div class="authentication-inner">
           <!-- Register -->
           <div class="card">
-            <div class="card-body">
+            <div class="card-body py-0">
               @error('email')
               <div class="alert alert-danger alert-dismissible" role="alert">
                 Salah Email atau password, coba lagi..
@@ -68,7 +68,7 @@
               </div>
               @enderror
               <!-- Logo -->
-              <div class="app-brand justify-content-center">
+              <div class="app-brand justify-content-center pt-3">
                 <img src="{{asset('img/icons/brands/LogoPVS-Warna.png')}}" alt="" srcset="" width="200px">
               </div>
               <!-- /Logo -->
@@ -78,13 +78,13 @@
               <form id="formAuthentication" class="mb-3" action="{{ route('loginFunc') }}" method="POST">
                 @csrf
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
+                  <label for="email" class="form-label">Email / Username</label>
                   <input
                     type="text"
                     class="form-control"
                     id="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder="Email/Username"
                     value="{{old('email')}}"
                     autofocus
                   />
@@ -118,6 +118,9 @@
                   <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
                 </div>
               </form>
+            </div>
+            <div class="card-footer pt-0 pb-0">
+                <p>Belum punya akun ?, <a href="{{route('register')}}">daftar di sini</a></p>
             </div>
           </div>
           <!-- /Register -->

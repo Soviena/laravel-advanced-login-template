@@ -48,10 +48,10 @@ class UserController extends Controller
     }
 
     public function loginFunc(Request $request){
-        $credentials = $request->only('email', 'password');
+        $field = filter_var($request->email, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
         $remember = $request->has('remember');
         // mengecek apakah checkbox "Ingat Saya" sudah ter centang
-        if (Auth::attempt($credentials, $remember)) {
+        if (Auth::attempt([$field => $request->email, 'password' => $request->password], $remember)) {
             return redirect()->route("index");
             // Meneruskan ke route utama
         }

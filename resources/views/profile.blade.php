@@ -284,6 +284,8 @@
     document.getElementById('btnUploadCover').setAttribute('disabled',"disabled");
     document.getElementById('btnUploadCover').setAttribute('hidden',"hidden");
     document.getElementById('cancelButton').classList.add('disabled');
+    document.getElementById('resetPicButton').click();
+    document.getElementById('resetPicButtonCover').click();
     document.getElementById('editButton').innerHTML = "Edit";
     input = document.getElementsByClassName('inputControll');
     for (let index = 0; index < input.length; index++) {

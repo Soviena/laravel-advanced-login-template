@@ -41,7 +41,6 @@
                                         <th style='width:1vw;'>Avatar</th>
                                         <th>First Name</th>
                                         <th>Last Name</th>
-                                        <th>Email</th>
                                         <th>Phone Number</th>
                                     </tr>
                                 </thead>
@@ -84,7 +83,6 @@
                                             </td>
                                             <td>{{ $u->user_data->first_name }}</td>
                                             <td>{{ $u->user_data->last_name }}</td>
-                                            <td>{{ $u->email }}</td>
                                             <td>{{ $u->user_data->phone_number }}</td>
                                         </tr>
                                     @endforeach

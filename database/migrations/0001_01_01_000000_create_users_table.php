@@ -18,6 +18,9 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->integer('failed_counter')->nullable();
+            $table->dateTime('consecutive_login_end_at')->nullable();
+            $table->dateTime('unblocked_at')->nullable();
             $table->timestamps();
         });
 

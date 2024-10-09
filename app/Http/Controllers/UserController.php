@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\OldPassword;
 use Illuminate\Support\Facades\Auth;
+use DateTime;
+use DateInterval;
 
 
 class UserController extends Controller
@@ -18,7 +20,7 @@ class UserController extends Controller
         ]);
         $u = DB::table('users')->where('email',$request->email)->first();
         if($u){
-            return back()->withErrors("Maaf, Alamat Email sudah terdaftar, coba alamat email lain!.");
+            return back()->withErrors(["error" => "Sudah Terdaftar"]);
         }
         $users = new User;
         $users->username = $request->username;
@@ -54,13 +56,42 @@ class UserController extends Controller
     }
 
     public function loginFunc(Request $request){
+        $now = new DateTime();
+        $oneHourLater = new DateTime();
+        $oneHourLater->add(new DateInterval('PT1H'));
+
         $field = filter_var($request->email, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+        $u = User::where($field,$request->email)->first();
+        if(!$u){
+            return back()->withErrors(["error" => "Tidak terdaftar!!"]);
+        }
+        if (!is_null($u->unblocked_at) && $u->unblocked_at >= $now) {
+            return back()->withErrors(["blocked" => "Akun anda di blokir"]);
+        }
         $remember = $request->has('remember');
-        // mengecek apakah checkbox "Ingat Saya" sudah ter centang
+
         if (Auth::attempt([$field => $request->email, 'password' => $request->password], $remember)) {
+            $u->consecutive_login_end_at = $oneHourLater;
+            $u->save();
             return redirect()->route("index");
             // Meneruskan ke route utama
         }
+
+        if (is_null($u->consecutive_login_end_at)) {
+            $u->consecutive_login_end_at = $oneHourLater;
+        }
+        if ($u->consecutive_login_end_at >= $now) {
+            $u->failed_counter = $u->failed_counter + 1;
+        }else{
+            $u->failed_counter = 1;
+        }
+        if ($u->failed_counter >= 3) {
+            $u->unblocked_at = $oneHourLater;
+            $u->save();
+            return back()->withErrors(["blocked" => "Akun anda di blokir"]);
+        }
+        $u->consecutive_login_end_at = $oneHourLater;
+        $u->save();
         return back()->withErrors(['email' => 'Invalid credentials'])->withInput();
     }
     public function register(Request $request){

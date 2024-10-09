@@ -67,6 +67,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
               @enderror
+              @error('blocked')
+              <div class="alert alert-danger alert-dismissible" role="alert">
+                 Akun anda di blokir!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              @enderror
+              @error('error')
+              <div class="alert alert-danger alert-dismissible" role="alert">
+                Akun Tidak Terdaftar
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              @enderror
               <!-- Logo -->
               <div class="app-brand justify-content-center pt-3">
                 <img src="{{asset('img/icons/brands/LogoPVS-Warna.png')}}" alt="" srcset="" width="200px">

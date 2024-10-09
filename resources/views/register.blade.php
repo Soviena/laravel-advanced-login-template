@@ -97,45 +97,51 @@
               <h5 class="mb-0">Register</h5>
             </div>
             <div class="card-body">
+                @error('error')
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                   Sudah Terdaftar
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @enderror
               <form action="{{ route('createUser') }}" method="POST">
                 @csrf
                 <div class="mb-6">
                   <label class="form-label" for="basic-icon-default-fullname">First Name</label>
                   <div class="input-group input-group-merge">
                     <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
-                    <input name="first_name" type="text" class="form-control" id="basic-icon-default-fullname" placeholder="John" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2">
+                    <input name="first_name" type="text" class="form-control" id="basic-icon-default-fullname" placeholder="John" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" required>
                   </div>
                 </div>
                 <div class="mb-6">
                   <label class="form-label" for="basic-icon-default-fullname">Last Name</label>
                   <div class="input-group input-group-merge">
                     <span id="basic-icon-default-fullname2" class="input-group-text"><i class=""></i></span>
-                    <input name="last_name" type="text" class="form-control" id="basic-icon-default-fullname" placeholder="Doe" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2">
+                    <input name="last_name" type="text" class="form-control" id="basic-icon-default-fullname" placeholder="Doe" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" required>
                   </div>
                 </div>
                 <div class="mb-6">
                   <label class="form-label" for="formtabs-birthdate">Birth Date</label>
                   <div class="input-group input-group-merge">
                     <span id="basic-icon-default-fullname2" class="input-group-text"><i class=""></i></span>
-                    <input name="tanggal_lahir" type="date" id="formtabs-birthdate" class="form-control" placeholder="YYYY-MM-DD">
+                    <input name="tanggal_lahir" type="date" id="formtabs-birthdate" class="form-control" placeholder="YYYY-MM-DD" required>
                   </div>
                 </div>
                 <div class="mb-6">
                     <label class="form-label" for="basic-icon-default-phone">Phone No</label>
                     <div class="input-group input-group-merge">
                       <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-phone"></i></span>
-                      <input name="phone_number" type="text" id="basic-icon-default-phone" class="form-control phone-mask" placeholder="658 799 8941" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2">
+                      <input name="phone_number" type="text" id="basic-icon-default-phone" class="form-control phone-mask" placeholder="658 799 8941" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2" required>
                     </div>
                   </div>
                   <div class="mb-6">
                     <label class="form-label" for="basic-icon-default-phone">Gender</label>
                     <div class="input-group input-group-merge justify-content-center">
                         <div class="form-check mx-3">
-                          <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male">
+                          <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male" required>
                           <label class="form-check-label" for="inlineRadio1">Male</label>
                         </div>
                         <div class="form-check mx-3">
-                          <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Female">
+                          <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Female" required>
                           <label class="form-check-label" for="inlineRadio2">Female</label>
                         </div>
                     </div>
@@ -144,14 +150,14 @@
                   <label class="form-label" for="basic-icon-default-fullname">Username</label>
                   <div class="input-group input-group-merge">
                     <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
-                    <input name="username" type="text" class="form-control" id="basic-icon-default-fullname" placeholder="John" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2">
+                    <input name="username" type="text" class="form-control" id="basic-icon-default-fullname" placeholder="John" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" required>
                   </div>
                 </div>
                 <div class="mb-6">
                   <label class="form-label" for="basic-icon-default-email">Email</label>
                   <div class="input-group input-group-merge">
                     <span class="input-group-text"><i class="bx bx-envelope"></i></span>
-                    <input name="email" type="email" id="basic-icon-default-email" class="form-control" placeholder="john.doe" aria-label="john.doe" aria-describedby="basic-icon-default-email2">
+                    <input name="email" type="email" id="basic-icon-default-email" class="form-control" placeholder="john.doe" aria-label="john.doe" aria-describedby="basic-icon-default-email2" required>
                     <span id="basic-icon-default-email2" class="input-group-text">@example.com</span>
                   </div>
                   <div class="form-text"> You can use letters, numbers &amp; periods </div>

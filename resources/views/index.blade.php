@@ -25,8 +25,74 @@
             </div>
         </div>
         <div class="card py-4">
-            <div class="container">
+            <div class="container-xxl flex-grow-1 container-p-y">
+                <h3 class="fw-bold py-3 mb-4 text-center">Data User</h3>
+                <div class="nav-align-top mb-4">
+                    <ul class="nav nav-tabs nav-fill" role="tablist">
+                        <li class="nav-item">
+                        </li>
 
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="navs-justified-home" role="tabpanel">
+                            <table class="table" id="tableUser">
+                                <thead>
+                                    <tr>
+                                        <th style='width:1vw;'>Avatar</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Email</th>
+                                        <th>Phone Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-border-bottom-0">
+                                    @foreach ($users as $u)
+                                        <tr>
+                                            <td>
+                                                <div class="btn-group dropend">
+                                                    <img class="rounded-circle mb-2 mx-auto shadow img-thumbnail dropdown-toggle"
+                                                        src="{{asset('storage/uploaded/user')}}@if($u->user_data->profile_picture == "")/default.jpeg @else/{{$u->user_data->profile_picture}} @endif"
+                                                        alt="{{ $u->user_data->first_name }}"
+                                                        style="object-fit: cover; object-position: 25% 25%;cursor: pointer;"
+                                                        data-bs-toggle="dropdown">
+                                                    <div class="dropdown-menu pt-0 pb-5" style=" width: 20vw;">
+                                                        <div class="card-img-top" style="background-image: url({{asset('storage/uploaded/user/')}}@if($u->user_data->cover_picture == "")/default_cover.png  @else/{{$u->user_data->cover_picture}} @endif); background-size:cover; background-position:center; height: 7vw; min-height:63px">
+                                                            <div class="d-flex justify-content-start">
+                                                                <div class="d-flex" style="margin-top: 22%; margin-left:20px">
+                                                                    <div class="d-block" style="position: relative; display: inline-block;">
+                                                                        <img class="rounded-circle" src="{{asset('storage/uploaded/user/')}}@if($u->user_data->profile_picture == "")/default.jpeg @else/{{$u->user_data->profile_picture}} @endif" id="profilePic" alt="user-avatar" style="width:5.5vw; min-width:55px; max-width:85px" id="uploadedAvatar">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body p-0 container" style="margin-left: 0">
+                                                            <div class="p-0 me-2 justify-content-end">
+                                                                <p class="" style="text-align: right; font-size: 14px; margin:0;">{{$u->user_data->phone_number}}</p>
+                                                            </div>
+                                                            <div class="p-0 me-2 justify-content-end">
+                                                                <p class="" style="text-align: right; font-size: 14px; margin:0;">{{$u->user_data->date_of_birth}}</p>
+                                                            </div>
+                                                            <div class="p-0 ms-3" style="">
+                                                                <p style="font-weight:bold; font-size: 18px; margin:0">{{$u->user_data->first_name}} {{$u->user_data->last_name}}</p>
+                                                            </div>
+                                                            <div class="p-0 ms-3" style="">
+                                                                <p style="font-size: 16px; margin:0">{{$u->username}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>{{ $u->user_data->first_name }}</td>
+                                            <td>{{ $u->user_data->last_name }}</td>
+                                            <td>{{ $u->email }}</td>
+                                            <td>{{ $u->user_data->phone_number }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

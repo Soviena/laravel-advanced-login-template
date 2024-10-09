@@ -12,11 +12,11 @@
           <form action="{{route('editUserData',Auth::user()->id)}}" method="POST" enctype="multipart/form-data" id="formSubmit">
             @method('PUT')
             @csrf
-            <div class="card-body py-1" id="coverPic" style="background-image: url({{asset('storage/uploaded/user/')}}@if($user->user_data->cover_picture == "")/default_cover.png @endif); background-size:cover">
+            <div class="card-body py-1" id="coverPic" style="background-image: url({{asset('storage/uploaded/user/')}}@if($user->user_data->cover_picture == "")/default_cover.png  @else/{{$user->user_data->cover_picture}} @endif); background-size:cover">
               <div class="d-flex justify-content-between mb-4" style="margin-top: 15%;">
                 <div class="d-flex">
                     <div class="d-block" style="position: relative; display: inline-block;">
-                        <img class="rounded-circle" src="{{asset('storage/uploaded/user/')}}@if($user->user_data->profile_picture == "")/default.jpeg @endif" id="profilePic" alt="user-avatar" height="100" width="100" id="uploadedAvatar" style="box-shadow: 5px 10px 30px -3px rgba(0,0,0,0.81);">
+                        <img class="rounded-circle" src="{{asset('storage/uploaded/user/')}}@if($user->user_data->profile_picture == "")/default.jpeg @else/{{$user->user_data->profile_picture}} @endif" id="profilePic" alt="user-avatar" height="100" width="100" id="uploadedAvatar" style="box-shadow: 5px 10px 30px -3px rgba(0,0,0,0.81);">
                         <button type="button" id="btnUpload" onclick="document.getElementById('upload').click();" disabled hidden style="position: absolute; right: 2%; bottom: 0; background-color: white; border:0; border-radius: 50%;  width: 30px; height:30px; cursor: not-allowed; box-shadow: 5px 10px 30px -3px rgba(0,0,0,0.81);">
                           <span>
                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 -0.5 25 25">
@@ -242,7 +242,7 @@
       <div class="modal-body">
         <div class="row g-2">
           <div class="mb-3">
-            <img id="cropperImage" class="" src="{{asset('storage/uploaded/user')}}@if($user->user_data->profile_picture == "")/default.jpeg @endif" style="max-width: 100%; display: block;">
+            <img id="cropperImage" class="" src="{{asset('storage/uploaded/user/')}}@if($user->user_data->profile_picture == "")/default.jpeg  @else/{{$user->user_data->profile_picture}} @endif" style="max-width: 100%; display: block;">
           </div>
         </div>
       </div>
@@ -273,7 +273,7 @@
       <div class="modal-body">
         <div class="row g-2">
           <div class="mb-3 d-flex justify-content-center">
-            <img id="cropperImageCover" class="" src="{{asset('storage/uploaded/user')}}@if($user->user_data->profile_picture == "")/default_cover.png @endif" style="max-width: 100%; display: block;">
+            <img id="cropperImageCover" class="" src="{{asset('storage/uploaded/user/')}}@if($user->user_data->profile_picture == "")/default_cover.png  @else/{{$user->user_data->cover_picture}} @endif" style="max-width: 100%; display: block;">
           </div>
         </div>
       </div>
@@ -396,7 +396,7 @@
   let cropper;
   let cropperCover;
   function checkFileSize(input) {
-      const maxFileSize = 26 * 1024 * 1024; // 10MB in bytes
+      const maxFileSize = 10 * 1024 * 1024; // 10MB in bytes
       if (input.files.length > 0) {
           const fileSize = input.files[0].size;
           if (fileSize > maxFileSize) {
@@ -531,7 +531,7 @@
     // Load img blob to input
     // WIP: UTF8 character error
     let fileName = 'pic';
-    let file = new File([imgBlob], fileName, { type: "image/jpeg", lastModified: new Date().getTime() }, 'utf-8');
+    let file = new File([imgBlob], fileName, { type: "image/png, image/jpeg", lastModified: new Date().getTime() }, 'utf-8');
     let container = new DataTransfer();
     container.items.add(file);
     document.querySelector(id).files = container.files;

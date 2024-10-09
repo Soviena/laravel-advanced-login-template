@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserDataController;
 use App\Http\Controllers\EmailVerificationController;
 
 // Show email verification notice
@@ -17,7 +18,7 @@ Route::group(['middleware' => 'auth'],function () {
     Route::get('/', [UserController::class, 'index'])->name('index');
     Route::get('/profile', [UserController::class, 'profile'])->name('profile');
     Route::put('/user/{id}', [UserController::class, 'updateUser'])->name('editUser');
-    Route::put('/user/{id}/data', [UserController::class, 'editUserData'])->name('editUserData');
+    Route::put('/user/{id}/data', [UserDataController::class, 'update'])->name('editUserData');
 });
 
 Route::get('/login', [UserController::class, 'login'])->name('login');

@@ -46,8 +46,8 @@ class UserController extends Controller
 
     public function index(Request $request){
         $user = Auth::user()->load('user_data');
-
-        return view('index', compact('user'));
+        $users = User::all();
+        return view('index', compact('user','users'));
     }
     public function login(Request $request){
         return view('login');

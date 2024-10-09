@@ -53,16 +53,16 @@
   </head>
 
 <body>
-    
+
     <div class="container-xxl">
           <div class="authentication-wrapper authentication-basic container-p-y">
             <div class="authentication-inner py-4">
               <!-- Forgot Password -->
               <div class="card">
                 <div class="card-body">
-                  
                   <h4 class="mb-2">Yeay! 😊</h4>
                   <p class="mb-4">Passwordmu telah berubah, Jangan lupa lagi ya</p>
+                  <a href=" {{route('login')}} " class="btn btn-primary">Login</a>
                 </div>
               </div>
               <!-- /Forgot Password -->

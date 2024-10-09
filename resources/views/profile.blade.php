@@ -1,5 +1,38 @@
 @extends('layout.layout')
 @section('content')
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    .strength {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .weak { color: red; }
+    .medium { color: orange; }
+    .strong { color: green; }
+    .meter {
+        height: 10px;
+        width: 100%;
+        background: #e0e0e0;
+        border-radius: 5px;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+    .fill {
+        height: 100%;
+        border-radius: 5px;
+        transition: width 0.3s;
+    }
+    .tips { margin-top: 10px; font-size: 0.9em; color: #333; }
+    .eye-icon {
+        cursor: pointer;
+        margin-left: 5px;
+        font-size: 1.2em;
+        vertical-align: middle;
+    }
+</style>
 <div class="content-wrapper">
   <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Account Settings /</span> Account</h4>
@@ -96,9 +129,9 @@
             <div class="card-body">
               <div class="row">
                 <div class="mb-3 col-md-6">
-                  <label for="email" class="form-label">Username</label>
+                  <label for="username" class="form-label">Username</label>
                   <input class="form-control inputControll-credential" readonly type="text" id="username" name="username" value="{{Auth::user()->username}}" placeholder="john.doe@example.com">
-                  @error('email')
+                  @error('username')
                     <span class="text-danger">{{ $message }}</span>
                   @enderror
                 </div>
@@ -110,26 +143,36 @@
                   @enderror
                 </div>
                 <div class="mb-3 col-md-6">
-                  <label for="email" class="form-label">New Password</label>
-                  <input class="form-control inputControll-credential" readonly type="password" id="password" name="password">
-                  @error('email')
+                  <label for="new-password" class="form-label">New Password</label>
+                  <input class="form-control inputControll-credential" readonly type="password" id="password" name="password" oninput="checkPassword()">
+                  @error('new-password')
                     <span class="text-danger">{{ $message }}</span>
                   @enderror
+                  <div id="result" class="strength">Strength: none</div>
+                  <div class="form-text meter">
+                      <div id="meterFill" class="fill"></div>
+                  </div>
+                  <div id="tips" class="form-text tips">No tips</div>
                 </div>
                 <div class="mb-3 col-md-6">
-                  <label for="email" class="form-label">Old Password*</label>
+                  <label for="old-password" class="form-label">Old Password*</label>
                   <input class="form-control inputControll-credential" readonly required type="password" id="old_password" name="old_password">
-                  @error('email')
+                  @error('old-password')
                     <span class="text-danger">{{ $message }}</span>
                   @enderror
                 </div>
               </div>
-              <div class="mt-2">
+              <div class="d-flex row mt-2 justify-content-between">
                 {{-- @if(Auth::user()->email_verified_at == '')
                   <a type="button" id="verifButton" class="btn btn-warning me-2" href="{{route('resendVerify',Auth::user()->id)}}" onclick="this.classlist.add('disabled')">Kirim Ulang verifikasi email</a>
                 @endif --}}
-                <button type="button" id="editButton-credential" class="btn btn-primary me-2" onclick="editCredential()">Edit</button>
-                <button type="reset" id="cancelButton-credential" class="btn btn-outline-secondary disabled" onclick="cancelEditCredential()">Cancel</button>
+                <div class="col-4 ">
+                    <button type="button" id="editButton-credential" class="btn btn-primary me-2" onclick="editCredential()">Edit</button>
+                    <button type="reset" id="cancelButton-credential" class="btn btn-outline-secondary disabled" onclick="cancelEditCredential()">Cancel</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" id="deleteButton-credential" class="btn btn-danger me-2" onclick="">Delete Account</button>
+                </div>
               </div>
             </div>
           </form>
@@ -339,6 +382,16 @@
       input[index].readOnly = true;
     }
     document.getElementById('editButton-credential').type = "button"
+    document.getElementById('editButton-credential').classList.remove('disabled');
+    const resultDiv = document.getElementById('result');
+    const meterFill = document.getElementById('meterFill');
+    const tipsDiv = document.getElementById('tips');
+    strength = 'none';
+    resultDiv.className = 'strength';
+    meterFill.style.width = '0%';
+    meterFill.style.backgroundColor = 'grey';
+    resultDiv.textContent = `Strength: ${strength}`;
+    tipsDiv.innerHTML = 'no tips';
   }
 
   function editCredential(){
@@ -578,6 +631,145 @@ function getImgURL(url, callback){
       successToast.show();
     @endif
   });
+
+  const commonPasswords = ["123456", "password", "123456789", "12345678", "12345", "qwerty", "abc123", "letmein", "monkey", "iloveyou"];
+        const commonWords = ["the", "of", "and", "to", "a", "in", "is", "you", "that", "it"]; // Add more common words as needed
+
+        function calculateEntropy(password) {
+            const uniqueChars = new Set(password);
+            const base = uniqueChars.size;
+            return Math.log2(Math.pow(base, password.length));
+        }
+
+        function hasSequentialChars(password) {
+            return /(.)\1{2,}|012|123|234|345|456|567|678|789|abc|bcd|cde|def|efg|fgh|ghi|hij|ijk|jkl|klm|lmn|mno|nop|opq|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz/i.test(password);
+        }
+
+        function containsLeetSpeak(password) {
+            const leetSpeakPatterns = {
+                'a': '4', 'e': '3', 'i': '1', 'o': '0', 's': '5', 't': '7', 'g': '9'
+            };
+            return Object.keys(leetSpeakPatterns).some(char => password.includes(leetSpeakPatterns[char]));
+        }
+
+        function containsCommonWords(password) {
+            return commonWords.some(word => password.toLowerCase().includes(word));
+        }
+
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const resultDiv = document.getElementById('result');
+            const meterFill = document.getElementById('meterFill');
+            const tipsDiv = document.getElementById('tips');
+            let strength = '';
+            let score = 0;
+            let tips = [];
+
+            // Resetting meter and feedback
+            meterFill.style.width = '0%';
+            tipsDiv.innerHTML = '';
+
+            // Check length
+            if (password.length >= 12) score++;
+            else if (password.length >= 8) score++;
+
+            // Check for character types
+            if (/[A-Z]/.test(password)) score++;
+            if (/[a-z]/.test(password)) score++;
+            if (/[0-9]/.test(password)) score++;
+            if (/[\W_]/.test(password)) score++;
+
+            // Check against common passwords
+            if (commonPasswords.includes(password)) {
+                score = 0;
+                tips.push('Avoid using common passwords.');
+            }
+
+            // Check for sequential characters
+            if (hasSequentialChars(password)) {
+                score--;
+                tips.push('Avoid using sequential characters.');
+            }
+
+            // Check for leet speak
+            if (containsLeetSpeak(password)) {
+                score--;
+                tips.push('Avoid using leet speak; it does not significantly increase security.');
+            }
+
+            // Check for common words
+            if (containsCommonWords(password)) {
+                score--;
+                tips.push('Avoid using common words or phrases in your password.');
+            }
+
+            // Calculate entropy
+            const entropy = calculateEntropy(password);
+            if (entropy < 40) {
+                score--;
+                tips.push('Consider using a more varied character set for better security.');
+            }
+
+            // Determine strength based on score
+            switch (score) {
+                case 0:
+                case 1:
+                    strength = 'Very Weak';
+                    resultDiv.className = 'strength weak';
+                    meterFill.style.width = '10%';
+                    meterFill.style.backgroundColor = 'purple';
+                    tips.push('Very weak! Use at least 12 characters with a mix of letters, numbers, and symbols.');
+                    document.getElementById('editButton-credential').classList.add('disabled');
+                    break;
+                case 2:
+                    strength = 'Weak';
+                    resultDiv.className = 'strength weak';
+                    meterFill.style.width = '30%';
+                    meterFill.style.backgroundColor = 'red';
+                    tips.push('Weak! Consider adding more unique characters.');
+                    document.getElementById('editButton-credential').classList.add('disabled');
+                    break;
+                case 3:
+                    strength = 'Medium';
+                    resultDiv.className = 'strength medium';
+                    meterFill.style.width = '60%';
+                    meterFill.style.backgroundColor = 'yellow';
+                    tips.push('Medium! Aim for a stronger password with more complexity.');
+                    document.getElementById('editButton-credential').classList.remove('disabled');
+                    break;
+                case 4:
+                    strength = 'Strong';
+                    resultDiv.className = 'strength strong';
+                    meterFill.style.width = '80%';
+                    meterFill.style.backgroundColor = 'lightgreen';
+                    tips.push('Strong! Good job, but you can still improve.');
+                    document.getElementById('editButton-credential').classList.remove('disabled');
+                    break;
+                case 5:
+                    strength = 'Very Strong';
+                    resultDiv.className = 'strength strong';
+                    meterFill.style.width = '100%';
+                    meterFill.style.backgroundColor = 'blue';
+                    tips.push('Amazing! Your password is very strong.');
+                    document.getElementById('editButton-credential').classList.remove('disabled');
+                    break;
+            }
+
+            resultDiv.textContent = `Strength: ${strength}`;
+            tipsDiv.innerHTML = tips.join('<br/>');
+        }
+
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const toggleVisibility = document.getElementById('toggleVisibility');
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleVisibility.textContent = "👁️‍🗨️"; // Change icon to indicate password is visible
+            } else {
+                passwordInput.type = "password";
+                toggleVisibility.textContent = "👁️"; // Change icon back to indicate password is hidden
+            }
+        }
 </script>
 
 @endsection

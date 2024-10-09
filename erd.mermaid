@@ -4,10 +4,12 @@ title: Simple Login
 erDiagram
     USER_DATA ||--||USER : has
     USER ||--o{ OLD_PASSWORD : have
+    USER |o--o{ USER_MESSAGE_USER : have
+    USER_MESSAGE_USER ||--|| MESSAGE : has
 
     USER_DATA {
-        serial id
-        int user_id
+        serial id PK
+        int user_id FK
         string first_name
         string last_name
         date date_of_birth
@@ -20,7 +22,7 @@ erDiagram
     }
 
     USER {
-        serial id
+        serial id PK
         string username
         string email
         string password
@@ -29,10 +31,27 @@ erDiagram
     }
 
     OLD_PASSWORD {
-        serial id
-        int user_id
+        serial id PK
+        int user_id FK
         string password
         datetime created_at
         datetime updated_at
     }
+
+    MESSAGE {
+        serial id PK
+        string body
+        string attachment
+        string attachment_type
+        datetime created_at
+        datetime updated_at
+    }
+
+    USER_MESSAGE_USER {
+        serial id PK
+        int message_id FK
+        int from_id FK
+        int to_id FK
+    }
+
 

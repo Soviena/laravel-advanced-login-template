@@ -137,7 +137,17 @@
                 </div>
                 <div class="mb-3 col-md-6">
                   <label for="email" class="form-label">E-mail</label>
-                  <input class="form-control inputControll-credential" readonly type="email" id="email" name="email" value="{{Auth::user()->email}}" placeholder="john.doe@example.com">
+                  <div class="input-group">
+                    <input class="form-control inputControll-credential" readonly type="email" id="email" name="email" value="{{Auth::user()->email}}" placeholder="john.doe@example.com">
+                    @if (!Auth::user()->email_verified_at)
+                        <a href="{{route('resendVerify',Auth::user()->id)}}" class="btn btn-outline-warning">Send Verification Link</a>
+                    @endif
+                  </div>
+                  @if (!Auth::user()->email_verified_at)
+                    <div class="form-text">
+                    Email Is Not Verified!
+                    </div>
+                  @endif
                   @error('email')
                     <span class="text-danger">{{ $message }}</span>
                   @enderror

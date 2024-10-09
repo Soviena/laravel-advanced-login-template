@@ -13,17 +13,19 @@ Route::get('/email/verify/{id}/{hash}', [EmailVerificationController::class, 've
 
 // Resend email verification link
 Route::post('/email/verify/resend', [EmailVerificationController::class, 'resend'])->middleware(['auth'])->name('verification.send');
+Route::get('/web/email/verify/resend/{uid}', [EmailVerificationController::class, 'resendW'])->name('resendVerify');
 
 Route::group(['middleware' => 'auth'],function () {
     Route::get('/', [UserController::class, 'index'])->name('index');
     Route::get('/profile', [UserController::class, 'profile'])->name('profile');
     Route::put('/user/{id}', [UserController::class, 'updateUser'])->name('editUser');
     Route::put('/user/{id}/data', [UserDataController::class, 'update'])->name('editUserData');
+    Route::get('/logout', [UserController::class, 'logOut'])->name('logout');
 });
-
-Route::get('/login', [UserController::class, 'login'])->name('login');
-Route::post('/login', [UserController::class, 'loginFunc'])->name('loginFunc');
-Route::get('/register', [UserController::class, 'register'])->name('register');
-Route::post('/register',  [UserController::class, 'create'])->name('createUser');
-Route::get('/logout', [UserController::class, 'logOut'])->name('logout');
+Route::middleware('guest')->group(function(){
+    Route::get('/login', [UserController::class, 'login'])->name('login');
+    Route::post('/login', [UserController::class, 'loginFunc'])->name('loginFunc');
+    Route::get('/register', [UserController::class, 'register'])->name('register');
+    Route::post('/register',  [UserController::class, 'create'])->name('createUser');
+});
 

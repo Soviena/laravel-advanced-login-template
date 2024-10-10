@@ -1,4 +1,5 @@
 import './bootstrap';
+import '../css/app.css';
 import '../vendor/fonts/boxicons.css';
 import '../vendor/css/core.css';
 import '../vendor/css/theme-default.css';

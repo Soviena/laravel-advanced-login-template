@@ -31,34 +31,9 @@
     />
 
     <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="{{asset('vendor/fonts/boxicons.css')}}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
-
-
-
-
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="{{asset('vendor/css/core.css')}}" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="{{asset('vendor/css/theme-default.css')}}" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="{{asset('css/demo.css')}}" />
-
-    <!-- Vendors CSS -->
-    <link rel="stylesheet" href="{{asset('vendor/libs/perfect-scrollbar/perfect-scrollbar.css')}}" />
-
-    <link rel="stylesheet" href="{{asset('vendor/libs/apex-charts/apex-charts.css')}}" />
-
-    <!-- Page CSS -->
-
-    <!-- Helpers -->
-    <script src="{{asset('vendor/js/helpers.js')}}"></script>
-
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="{{asset('js/config.js')}}"></script>
-    <script src="{{asset('vendor/js/bootstrap.js')}}"></script>
-    <script src="{{asset('vendor/libs/jquery/jquery.js')}}"></script>
-
+    @vite(['resources/js/app.js'])
   </head>
 
   <body>

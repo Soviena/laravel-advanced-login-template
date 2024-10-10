@@ -354,14 +354,14 @@
   // Add an event listener to the input element to handle file selection
 
   function resetImage() {
-    previewImage.src = "{{asset('storage/uploaded/user')}}@if($user->user_data->profile_picture == "")/default.jpeg @endif";
+    previewImage.src = "{{asset('storage/uploaded/user')}}@if($user->user_data->profile_picture == "")/default.jpeg @else/{{$user->user_data->profile_picture}} @endif";
     imageInput.value = "";
     document.getElementById('resetPicButton').setAttribute('disabled',"disabled");
     document.getElementById('resetPicButton').setAttribute('hidden',"hidden");
     document.getElementById('resetPicButton').style.cursor = 'disabled';
   }
   function resetImageCover() {
-    previewCover.style.backgroundImage = 'url("{{asset('storage/uploaded/user')}}@if($user->user_data->cover_picture == "")/default_cover.png @endif")';
+    previewCover.style.backgroundImage = 'url("{{asset('storage/uploaded/user')}}@if($user->user_data->cover_picture == "")/default_cover.png @else/{{$user->user_data->cover_picture}} @endif")';
     coverInput.value = "";
     document.getElementById('resetPicButtonCover').setAttribute('disabled',"disabled");
     document.getElementById('resetPicButtonCover').setAttribute('hidden',"hidden");
@@ -454,8 +454,8 @@
     backdrop: 'static',   // Set backdrop option to 'static' to prevent closing on backdrop click
     keyboard: false       // Set keyboard option to false to prevent closing on Escape key press
   };
-  const modal = new bootstrap.Modal(document.getElementById('CropperModal'),options);
-  const modalCover = new bootstrap.Modal(document.getElementById('CropperModalCover'),options);
+  var modal;
+  var modalCover;
   let cropper;
   let cropperCover;
   function checkFileSize(input) {
@@ -504,7 +504,7 @@
       reader.readAsDataURL(file);
     } else {
       // If no file was selected, reset the cropper and image source
-      cropperImage.src = "{{asset('storage/uploaded/user/'.Auth::user()->profilepic)}}";
+      cropperImage.src = "{{asset('storage/uploaded/user')}}@if($user->user_data->profile_picture == "")/default_cover.png @else/{{$user->user_data->profile_picture}} @endif";
       if (cropper) {
         cropper.destroy();
       }
@@ -543,7 +543,7 @@
       reader.readAsDataURL(file);
     } else {
       // If no file was selected, reset the cropper and image source
-      cropperImageCover.src = "{{asset('storage/uploaded/user')}}@if($user->user_data->cover_picture == "")/default_cover.png @endif";
+      cropperImageCover.src = "{{asset('storage/uploaded/user')}}@if($user->user_data->cover_picture == "")/default_cover.png @else {{$user->user_data->cover_picture}} @endif";
       if (cropperCover) {
         cropperCover.destroy();
       }
@@ -624,6 +624,8 @@ function getImgURL(url, callback){
 
 
   $(document).ready(function () {
+    modal =  new bootstrap.Modal(document.getElementById('CropperModal'),options);
+    modalCover =  new bootstrap.Modal(document.getElementById('CropperModalCover'),options);
     @if(session('EditSuccess'))
       successToast = new bootstrap.Toast(document.getElementById('editSuccessToast'));
       successToast.show();

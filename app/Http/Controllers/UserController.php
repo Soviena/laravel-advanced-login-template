@@ -66,6 +66,8 @@ class UserController extends Controller
             return back()->withErrors(["error" => "Tidak terdaftar!!"]);
         }
         if (!is_null($u->unblocked_at) && $u->unblocked_at >= $now) {
+            $u->unblocked_at = $oneHourLater;
+            $u->save();
             return back()->withErrors(["blocked" => "Akun anda di blokir"]);
         }
         $remember = $request->has('remember');

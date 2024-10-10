@@ -26,7 +26,7 @@
         </div>
         <div class="card py-4">
             <div class="container-xxl flex-grow-1 container-p-y">
-                <h3 class="fw-bold py-3 mb-4 text-center">Data User</h3>
+                <h3 class="fw-bold py-3 mb-4 text-center">Daftar User</h3>
                 <div class="nav-align-top mb-4">
                     <ul class="nav nav-tabs nav-fill" role="tablist">
                         <li class="nav-item">
@@ -76,6 +76,9 @@
                                                             </div>
                                                             <div class="p-0 ms-3" style="">
                                                                 <p style="font-size: 16px; margin:0">{{$u->username}}</p>
+                                                            </div>
+                                                            <div class="p-0 ms-3" style="">
+                                                                <p class="badge @if($u->email_verified_at) bg-label-primary @else bg-label-danger @endif" style="font-size: 10px; margin:0">@if($u->email_verified_at) Verified @else Not Verified @endif</p>
                                                             </div>
                                                         </div>
                                                     </div>

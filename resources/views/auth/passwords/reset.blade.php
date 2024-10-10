@@ -30,7 +30,10 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-
+    <script src="{{asset('vendor/js/helpers.js')}}"></script>
+    <script src="{{asset('js/config.js')}}"></script>
+    <script src="{{asset('vendor/js/bootstrap.js')}}"></script>
+    <script src="{{asset('vendor/libs/jquery/jquery.js')}}"></script>
     @vite(['resources/js/app.js'])
     <style>
         body {
@@ -235,7 +238,7 @@
                 meterFill.style.width = '60%';
                 meterFill.style.backgroundColor = 'yellow';
                 tips.push('Medium! Aim for a stronger password with more complexity.');
-                document.getElementById('submit').classList.remove('disabled');
+                document.getElementById('submit').classList.add('disabled');
                 break;
             case 4:
                 strength = 'Strong';

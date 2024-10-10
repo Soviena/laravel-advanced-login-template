@@ -745,7 +745,7 @@ function getImgURL(url, callback){
                     meterFill.style.width = '60%';
                     meterFill.style.backgroundColor = 'yellow';
                     tips.push('Medium! Aim for a stronger password with more complexity.');
-                    document.getElementById('editButton-credential').classList.remove('disabled');
+                    document.getElementById('submit-register').classList.add('disabled');
                     break;
                 case 4:
                     strength = 'Strong';

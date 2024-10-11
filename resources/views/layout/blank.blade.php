@@ -30,13 +30,6 @@
       rel="stylesheet"
     />
 
-    <!-- Icons. Uncomment required icon fonts -->
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
-    <script src="{{asset('vendor/js/helpers.js')}}"></script>
-    <script src="{{asset('vendor/js/bootstrap.js')}}"></script> --}}
-    {{-- <script src="{{asset('js/config.js')}}"></script> --}}
-    {{-- <script src="{{asset('vendor/libs/jquery/jquery.js')}}"></script> --}}
     @vite([ 'resources/js/jquery.js', 'resources/css/app.css', 'resources/js/config.js', 'resources/js/app.js', 'resources/js/bootstrap.js','resources/js/helpers.js', 'resources/js/menu.js', 'resources/js/apexcharts.js', 'resources/js/dashboards-analytics.js', 'resources/js/main.js', 'resources/js/masonry.js',  'resources/js/perfect-scrollbar.js', 'resources/js/popper.js', 'resources/js/cropper.min.js'])
   </head>
 

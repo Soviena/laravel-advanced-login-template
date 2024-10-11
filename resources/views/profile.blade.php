@@ -165,6 +165,13 @@
                   <div id="tips" class="form-text tips">No tips</div>
                 </div>
                 <div class="mb-3 col-md-6">
+                    <label for="new-password-confirm" class="form-label">Confirm New Password</label>
+                    <input class="form-control inputControll-credential" readonly type="password" id="password-confirm" name="password">
+                    @error('new-password-confirm')
+                      <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                  </div>
+                <div class="mb-3 col-md-6">
                   <label for="old-password" class="form-label">Old Password*</label>
                   <input class="form-control inputControll-credential" readonly required type="password" id="old_password" name="old_password">
                   @error('old-password')
@@ -260,6 +267,23 @@
     You need to confirm your old password
   </div>
 </div>
+<div
+  class="bs-toast toast fade bg-danger bottom-0 end-0 position-absolute m-5"
+  role="alert"
+  aria-live="assertive"
+  aria-atomic="true"
+  id="passwordConfirmError"
+>
+  <div class="toast-header">
+    <i class="bx bx-bell me-2"></i>
+    <div class="me-auto fw-semibold">Error</div>
+    <small></small>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    You confirmation password not match
+  </div>
+</div>
   <div
     class="bs-toast toast fade bg-success bottom-0 end-0 position-absolute m-5"
     role="alert"
@@ -341,10 +365,6 @@
   </div>
 </div>
 
-
-
-{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.js"></script> --}}
-{{-- @vite(['resources/js/cropper.min.js']) --}}
 <script>
   // Get references to the input and image elements
   const imageInput = document.getElementById('upload');
@@ -409,6 +429,13 @@
     event.preventDefault();
     if (document.getElementById('editButton-credential').type == 'submit') {
       let old_password = document.getElementById('old_password');
+      let confirm_password = document.getElementById('password-confirm');
+      let password = document.getElementById('password');
+      if (confirm_password.value != password.value ) {
+        successToast = new bootstrap.Toast(document.getElementById('passwordConfirmError'));
+        successToast.show();
+        return;
+      }
       if (old_password.value == '') {
         successToast = new bootstrap.Toast(document.getElementById('passwordError'));
         successToast.show();
@@ -773,18 +800,6 @@ function getImgURL(url, callback){
 
             resultDiv.textContent = `Strength: ${strength}`;
             tipsDiv.innerHTML = tips.join('<br/>');
-        }
-
-        function togglePasswordVisibility() {
-            const passwordInput = document.getElementById('password');
-            const toggleVisibility = document.getElementById('toggleVisibility');
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                toggleVisibility.textContent = "👁️‍🗨️"; // Change icon to indicate password is visible
-            } else {
-                passwordInput.type = "password";
-                toggleVisibility.textContent = "👁️"; // Change icon back to indicate password is hidden
-            }
         }
 </script>
 

@@ -343,7 +343,8 @@
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.js"></script>
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.js"></script> --}}
+{{-- @vite(['resources/js/cropper.min.js']) --}}
 <script>
   // Get references to the input and image elements
   const imageInput = document.getElementById('upload');
@@ -622,8 +623,7 @@ function getImgURL(url, callback){
     cropperCover.destroy();
   }
 
-
-  $(document).ready(function () {
+  function initializeModal() {
     modal =  new bootstrap.Modal(document.getElementById('CropperModal'),options);
     modalCover =  new bootstrap.Modal(document.getElementById('CropperModalCover'),options);
     @if(session('EditSuccess'))
@@ -642,7 +642,11 @@ function getImgURL(url, callback){
       successToast = new bootstrap.Toast(document.getElementById('resendSuccess'));
       successToast.show();
     @endif
-  });
+  }
+
+  (function() {
+    setTimeout(initializeModal, 500);
+})();
 
   const commonPasswords = ["123456", "password", "123456789", "12345678", "12345", "qwerty", "abc123", "letmein", "monkey", "iloveyou"];
         const commonWords = ["the", "of", "and", "to", "a", "in", "is", "you", "that", "it"]; // Add more common words as needed

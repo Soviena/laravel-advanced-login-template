@@ -14,6 +14,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
+    @vite(['resources/js/bootstrap.js'])
 
     <title>@isset($page) {{$page['title']}} @endisset</title>
 
@@ -34,10 +35,10 @@
     {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"> --}}
     {{-- <script src="{{asset('vendor/js/helpers.js')}}"></script> --}}
-    <script src="{{asset('js/config.js')}}"></script>
-    <script src="{{asset('vendor/js/bootstrap.js')}}"></script>
-    <script src="{{asset('vendor/libs/jquery/jquery.js')}}"></script>
-    @vite(['resources/css/app.css', 'resources/js/config.js', 'resources/js/app.js', 'resources/js/jquery.js', 'resources/js/bootstrap.js','resources/js/helpers.js', 'resources/js/menu.js', 'resources/js/apexcharts.js', 'resources/js/dashboards-analytics.js', 'resources/js/main.js', 'resources/js/masonry.js',  'resources/js/perfect-scrollbar.js', 'resources/js/popper.js'])
+    {{-- <script src="{{asset('vendor/js/bootstrap.js')}}"></script> --}}
+    {{-- <script src="{{asset('js/config.js')}}"></script> --}}
+    {{-- <script src="{{asset('vendor/libs/jquery/jquery.js')}}"></script> --}}
+    @vite(['resources/css/app.css', 'resources/js/jquery.js', 'resources/js/app.js','resources/js/helpers.js', 'resources/js/menu.js', 'resources/js/apexcharts.js', 'resources/js/dashboards-analytics.js', 'resources/js/main.js', 'resources/js/masonry.js',  'resources/js/perfect-scrollbar.js', 'resources/js/popper.js'])
   </head>
 
   <body>

@@ -15,12 +15,15 @@ use DateInterval;
 class UserController extends Controller
 {
     public function create(Request $request){
+        if ($request->password != $request->confirm_password) {
+            return back()->with(["error" => "Konfirmasi password salah"]);
+        };
         $request->validate([
             'email' => 'required|email',
         ]);
         $u = DB::table('users')->where('email',$request->email)->first();
         if($u){
-            return back()->withErrors(["error" => "Sudah Terdaftar"]);
+            return back()->with(["error" => "Sudah Terdaftar"]);
         }
         $users = new User;
         $users->username = $request->username;

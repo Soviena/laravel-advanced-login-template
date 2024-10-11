@@ -81,33 +81,33 @@
               <h5 class="mb-0">Register</h5>
             </div>
             <div class="card-body">
-                @error('error')
+                @if(session('error'))
                 <div class="alert alert-danger alert-dismissible" role="alert">
-                   Sudah Terdaftar
+                    {{session('error')}}
                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
-                @enderror
-              <form action="{{ route('createUser') }}" method="POST">
+                @endif
+              <form action="{{ route('createUser') }}" id="form-register" method="POST">
                 @csrf
                 <div class="mb-6">
                   <label class="form-label" for="basic-icon-default-fullname">First Name</label>
                   <div class="input-group input-group-merge">
                     <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
-                    <input name="first_name" type="text" class="form-control" id="basic-icon-default-fullname" placeholder="John" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" required>
+                    <input name="first_name" type="text" class="form-control" id="first-name" placeholder="John" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" required>
                   </div>
                 </div>
                 <div class="mb-6">
                   <label class="form-label" for="basic-icon-default-fullname">Last Name</label>
                   <div class="input-group input-group-merge">
                     <span id="basic-icon-default-fullname2" class="input-group-text"><i class=""></i></span>
-                    <input name="last_name" type="text" class="form-control" id="basic-icon-default-fullname" placeholder="Doe" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" required>
+                    <input name="last_name" type="text" class="form-control" id="last-name" placeholder="Doe" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" required>
                   </div>
                 </div>
                 <div class="mb-6">
                   <label class="form-label" for="formtabs-birthdate">Birth Date</label>
                   <div class="input-group input-group-merge">
                     <span id="basic-icon-default-fullname2" class="input-group-text"><i class=""></i></span>
-                    <input name="tanggal_lahir" type="date" id="formtabs-birthdate" class="form-control" placeholder="YYYY-MM-DD" required>
+                    <input name="tanggal_lahir" type="date" id="dob" class="form-control" placeholder="YYYY-MM-DD" required>
                   </div>
                 </div>
                 <div class="mb-6">
@@ -158,6 +158,30 @@
                     </div>
                     <div id="tips" class="form-text tips"></div>
                 </div>
+                <div class="mb-6">
+                    <label class="form-label" for="basic-icon-default-fullname">Confirm Password</label>
+                      <div class="input-group input-group-merge">
+                          <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-key"></i></span>
+                          <input name="confirm_password" type="password" class="form-control" id="password-confirm" oninput="checkPassword()">
+                      </div>
+                  </div>
+                  <div
+                    class="bs-toast toast fade bg-danger bottom-0 end-0 position-absolute m-5"
+                    role="alert"
+                    aria-live="assertive"
+                    aria-atomic="true"
+                    id="passwordConfirmError"
+                    >
+                    <div class="toast-header">
+                        <i class="bx bx-bell me-2"></i>
+                        <div class="me-auto fw-semibold">Error</div>
+                        <small></small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        You confirmation password not match
+                    </div>
+                    </div>
                 <button type="submit" id="submit-register" class="btn btn-primary waves-effect waves-light mt-3 disabled">Register</button>
               </form>
             </div>

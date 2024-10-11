@@ -166,7 +166,7 @@
                 </div>
                 <div class="mb-3 col-md-6">
                     <label for="new-password-confirm" class="form-label">Confirm New Password</label>
-                    <input class="form-control inputControll-credential" readonly type="password" id="password-confirm" name="password">
+                    <input class="form-control inputControll-credential" readonly type="password" id="password-confirm" name="confirm_password">
                     @error('new-password-confirm')
                       <span class="text-danger">{{ $message }}</span>
                     @enderror
@@ -778,7 +778,7 @@ function getImgURL(url, callback){
                     meterFill.style.width = '60%';
                     meterFill.style.backgroundColor = 'yellow';
                     tips.push('Medium! Aim for a stronger password with more complexity.');
-                    document.getElementById('submit-register').classList.add('disabled');
+                    document.getElementById('editButton-credential').classList.add('disabled');
                     break;
                 case 4:
                     strength = 'Strong';

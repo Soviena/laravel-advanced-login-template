@@ -101,6 +101,9 @@ class UserController extends Controller
     }
 
     public function updateUser(Request $request, $id) {
+        if ($request->password != $request->confirm_password) {
+            return back()->with(["error" => "Konfirmasi password salah"]);
+        };
         $user = User::findOrFail($id);
         if (!password_verify($request->old_password,$user->password)) {
             return back()->with(["error" => "Password lama salah"]);

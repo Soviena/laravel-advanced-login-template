@@ -62,7 +62,7 @@ class User extends Authenticatable
     public function receivedChat(): HasManyThrough{
         return $this->hasManyThrough(Chat::class,UserChatUser::class, 'to_id','id','id','chat_id');
     }
-    public function chatUsers(): HasMany{
-        return $this->hasMany(UserChatUser::class, 'from_id');
+    public function chatUsers(): HasManyThrough{
+        return $this->hasManyThrough(User::class,UserChatUser::class, 'from_id','id','id','to_id');
     }
 }

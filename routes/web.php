@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserDataController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\EmailVerificationController;
 
 // Show email verification notice
@@ -20,6 +21,7 @@ Route::group(['middleware' => 'auth'],function () {
     Route::get('/profile', [UserController::class, 'profile'])->name('profile');
     Route::put('/user/{id}', [UserController::class, 'updateUser'])->name('editUser');
     Route::put('/user/{id}/data', [UserDataController::class, 'update'])->name('editUserData');
+    Route::get('/chat', [ChatController::class, 'index'])->name('chat');
     Route::get('/logout', [UserController::class, 'logOut'])->name('logout');
 });
 Route::middleware('guest')->group(function(){
@@ -34,8 +36,3 @@ Route::post('/password/email', 'App\Http\Controllers\Auth\ForgotPasswordControll
 Route::get('/password/reset/{token}', 'App\Http\Controllers\Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('/password/reset', 'App\Http\Controllers\Auth\ResetPasswordController@reset')->name('password.update');
 Route::get('/web/email/verify/resend/{uid}', [EmailVerificationController::class, 'resendW'])->name('resendVerify');
-Route::get('/chat', function(){
-    $user = Auth::user()->load('user_data');
-
-    return view('chat',compact('user'));
-});

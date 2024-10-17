@@ -10,19 +10,20 @@
                 <div class="container px-0">
                     <ul class="list-group list-group-flush">
 
-                        <li class="list-group-item px-0">
+                        @foreach ($user->chatUsers as $u)
+                        <li class="list-group-item px-0 btn btn-outline-secondary">
                             <div class="row">
                                 <div class="col-2">
                                     <div class="avatar avatar-online">
-                                        <img src="http://127.0.0.1:8000/storage/uploaded/user/xOWMs3lTL0Esuq3MfFUAJStvWMm6yoGKV59jDSKJ.png " alt="" class="w-px-40 h-auto rounded-circle">
+                                        <img src="{{asset('storage/uploaded/user')}}@if($u->user_data->profile_picture == "")/default.jpeg @else/{{$u->user_data->profile_picture}} @endif" alt="" class="w-px-40 h-auto rounded-circle">
                                     </div>
                                 </div>
                                 <div class="col-8">
                                     <div class="row">
-                                        Name
+                                        {{$u->username}}
                                     </div>
                                     <div class="row">
-                                        Some sub text
+                                        {{$u->email}}
                                     </div>
                                 </div>
                                 <div class="col-2">
@@ -34,29 +35,7 @@
                             </div>
                         </li>
 
-                        <li class="list-group-item px-0">
-                            <div class="row">
-                                <div class="col-2">
-                                    <div class="avatar avatar-online">
-                                        <img src="http://127.0.0.1:8000/storage/uploaded/user/xOWMs3lTL0Esuq3MfFUAJStvWMm6yoGKV59jDSKJ.png " alt="" class="w-px-40 h-auto rounded-circle">
-                                    </div>
-                                </div>
-                                <div class="col-8">
-                                    <div class="row">
-                                        Name
-                                    </div>
-                                    <div class="row">
-                                        Some sub text
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="row">4:14 PM</div>
-                                    <div class="row">
-                                        <span class="badge bg-danger badge-center rounded-pill float-right">5</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                        @endforeach
 
                     </ul>
                 </div>
@@ -120,3 +99,7 @@
     </div>
 </div>
 @endsection
+
+<script>
+
+</script>

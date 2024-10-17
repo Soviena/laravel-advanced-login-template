@@ -4,8 +4,8 @@ title: Simple Login
 erDiagram
     USER_DATA ||--||USER : has
     USER ||--o{ OLD_PASSWORD : have
-    USER |o--o{ USER_MESSAGE_USER : have
-    USER_MESSAGE_USER ||--|| MESSAGE : has
+    USER |o--o{ USER_CHAT_USER : have
+    USER_CHAT_USER ||--|| CHAT : has
 
     USER_DATA {
         serial id PK
@@ -38,7 +38,7 @@ erDiagram
         datetime updated_at
     }
 
-    MESSAGE {
+    CHAT {
         serial id PK
         string body
         string attachment
@@ -47,9 +47,9 @@ erDiagram
         datetime updated_at
     }
 
-    USER_MESSAGE_USER {
+    USER_CHAT_USER {
         serial id PK
-        int message_id FK
+        int chat_id FK
         int from_id FK
         int to_id FK
     }

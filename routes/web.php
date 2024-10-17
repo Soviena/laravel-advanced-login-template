@@ -34,3 +34,8 @@ Route::post('/password/email', 'App\Http\Controllers\Auth\ForgotPasswordControll
 Route::get('/password/reset/{token}', 'App\Http\Controllers\Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('/password/reset', 'App\Http\Controllers\Auth\ResetPasswordController@reset')->name('password.update');
 Route::get('/web/email/verify/resend/{uid}', [EmailVerificationController::class, 'resendW'])->name('resendVerify');
+Route::get('/chat', function(){
+    $user = Auth::user()->load('user_data');
+
+    return view('chat',compact('user'));
+});

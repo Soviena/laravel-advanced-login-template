@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 
 class User extends Authenticatable
 {
@@ -54,5 +55,14 @@ class User extends Authenticatable
     }
     public function old_password(): HasMany{
         return $this->hasMany(OldPassword::class);
+    }
+    public function sentChat(): HasManyThrough{
+        return $this->hasManyThrough(Chat::class,UserChatUser::class, 'from_id','id','id','chat_id');
+    }
+    public function receivedChat(): HasManyThrough{
+        return $this->hasManyThrough(Chat::class,UserChatUser::class, 'to_id','id','id','chat_id');
+    }
+    public function chatUsers(): HasMany{
+        return $this->hasMany(UserChatUser::class, 'from_id');
     }
 }

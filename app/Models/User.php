@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
+use Illuminate\Database\Eloquent\Collection;
 
 class User extends Authenticatable
 {
@@ -62,7 +63,18 @@ class User extends Authenticatable
     public function receivedChat(): HasManyThrough{
         return $this->hasManyThrough(Chat::class,UserChatUser::class, 'to_id','id','id','chat_id');
     }
-    public function chatUsers(): HasManyThrough{
-        return $this->hasManyThrough(User::class,UserChatUser::class, 'from_id','id','id','to_id');
+    public function chatUsers(): Collection{
+        // Users where the current user is the sender (from_id) and the others are receivers (to_id)
+        $usersFrom = User::whereHas('receivedChat', function($query) {
+            $query->where('from_id', $this->id);
+        })->distinct()->get();
+
+        // Users where the current user is the receiver (to_id) and the others are senders (from_id)
+        $usersTo = User::whereHas('sentChat', function($query) {
+            $query->where('to_id', $this->id);
+        })->distinct()->get();
+
+        // Merge both collections and remove duplicates
+        return $usersFrom->merge($usersTo)->unique('id');
     }
 }

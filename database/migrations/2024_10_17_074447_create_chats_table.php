@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('chats', function (Blueprint $table) {
             $table->id();
             $table->string('body');
-            $table->string('attachment');
-            $table->string('attachment_type');
+            $table->string('attachment')->nullable();
+            $table->string('attachment_type')->nullable();
         });
     }
 

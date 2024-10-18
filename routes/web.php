@@ -22,6 +22,8 @@ Route::group(['middleware' => 'auth'],function () {
     Route::put('/user/{id}', [UserController::class, 'updateUser'])->name('editUser');
     Route::put('/user/{id}/data', [UserDataController::class, 'update'])->name('editUserData');
     Route::get('/chat', [ChatController::class, 'index'])->name('chat');
+    Route::post('/chat', [ChatController::class, 'sendChat'])->name('sendChat');
+    Route::get('/chat/{toId}', [ChatController::class, 'chat'])->name('chatTo');
     Route::get('/logout', [UserController::class, 'logOut'])->name('logout');
 });
 Route::middleware('guest')->group(function(){

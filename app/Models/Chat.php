@@ -3,11 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Chat extends Model
 {
-    public function chatUsers(): BelongsTo{
-        return $this->belongsTo(UserChatUser::class);
+    public $timestamps = false;
+    public function chatUsers(): HasOne{
+        return $this->HasOne(UserChatUser::class,'chat_id','id');
     }
 }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class UserChatUser extends Model
 {
@@ -13,7 +14,7 @@ class UserChatUser extends Model
     public function to_user(): HasOne{
         return $this->hasOne(User::class, 'id','to_id');
     }
-    public function chat(): HasOne{
-        return $this->hasOne(Chat::class);
+    public function chat(): BelongsTo{
+        return $this->BelongsTo(Chat::class,'chat_id');
     }
 }

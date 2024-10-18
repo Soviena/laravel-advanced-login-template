@@ -10,8 +10,8 @@
                 <div class="container px-0">
                     <ul class="list-group list-group-flush">
 
-                        @foreach ($user->chatUsers as $u)
-                        <li class="list-group-item px-0 btn btn-outline-secondary">
+                        @foreach ($chatUsers as $u)
+                        <li class="list-group-item px-0 btn btn-outline-secondary" onclick="window.location.href='{{route('chatTo',$u->id)}}'">
                             <div class="row">
                                 <div class="col-2">
                                     <div class="avatar avatar-online">
@@ -43,57 +43,44 @@
             <div class="col card">
                 <div class="row mx-2 pt-3">
                     <div class="col-2">
-                        <div class="avatar avatar-online">
-                            <img src="http://127.0.0.1:8000/storage/uploaded/user/xOWMs3lTL0Esuq3MfFUAJStvWMm6yoGKV59jDSKJ.png " alt="" class="w-px-40 h-auto rounded-circle">
-                        </div>
+                        @isset($aite)
+                            <div class="avatar avatar-online">
+                                <img src="{{asset('storage/uploaded/user')}}@if($aite->user_data->profile_picture == "")/default.jpeg @else/{{$aite->user_data->profile_picture}} @endif" alt="" class="w-px-40 h-auto rounded-circle">
+                            </div>
+                        @endisset
                     </div>
                     <div class="col-10">
-                        Your Name
+                        @isset($aite)
+                        {{$aite->user_data->first_name}} {{$aite->user_data->last_name}}
+                        @endisset
                     </div>
                 </div>
                 <hr>
                 <div class="row" style="max-height: 77vh; min-height: 77vh;">
                     <div class="container">
-                        <div class="container">
-                            <div class="container">
-                                Hello
+
+                        @isset($messages)
+                            @foreach ($messages as $m)
+                            <div class="container @if($m->from_id == $user->id) text-end @endif">
+                                <div class="container">
+                                    {{$m->chat->body}}
+                                </div>
                             </div>
-                            <div class="container">
-                                World
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="container">
-                                Hello
-                            </div>
-                            <div class="container">
-                                World
-                            </div>
-                        </div>
-                        <div class="container text-end">
-                            <div class="container">
-                                Hello
-                            </div>
-                            <div class="container">
-                                World
-                            </div>
-                        </div>
-                        <div class="container ">
-                            <div class="container">
-                                Hello
-                            </div>
-                        </div>
-                        <div class="container text-end">
-                            <div class="container">
-                                Hello
-                            </div>
-                        </div>
+                            @endforeach
+                        @endisset
+
                     </div>
                 </div>
-                <div class="row mx-2 pb-2">
-                    <input class="col-10 me-2" type="text" name="" id="">
-                    <button class="col btn btn-primary">Send</button>
-                </div>
+                @isset($aite)
+                    <div class="row mx-2 pb-2">
+                        <form method="POST" action="{{route('sendChat')}}">
+                            @csrf
+                            <input type="hidden" name="to_id" value="{{$aite->id}}">
+                            <input class="col-10 me-2" type="text" name="body" id="">
+                            <button class="col btn btn-primary" type="submit">Send</button>
+                        </form>
+                    </div>
+                @endisset
             </div>
         </div>
     </div>

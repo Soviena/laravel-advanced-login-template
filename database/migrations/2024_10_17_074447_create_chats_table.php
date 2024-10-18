@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('body');
             $table->string('attachment');
             $table->string('attachment_type');
-            $table->timestamps();
         });
     }
 

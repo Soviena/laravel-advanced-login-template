@@ -16,8 +16,10 @@ return new class extends Migration
             $table->foreignId('chat_id');
             $table->foreignId('from_id');
             $table->foreignId('to_id');
+            $table->foreign('chat_id')->references('id')->on('chats');
             $table->foreign('from_id')->references('id')->on('users');
             $table->foreign('to_id')->references('id')->on('users');
+            $table->timestamps();
         });
     }
 

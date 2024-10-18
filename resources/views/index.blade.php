@@ -46,6 +46,8 @@
                                 </thead>
                                 <tbody class="table-border-bottom-0">
                                     @foreach ($users as $u)
+                                        @if ($u->id != $user->id)
+
                                         <tr>
                                             <td>
                                                 <div class="btn-group dropend">
@@ -80,6 +82,9 @@
                                                             <div class="p-0 ms-3" style="">
                                                                 <p class="badge @if($u->email_verified_at) bg-label-primary @else bg-label-danger @endif" style="font-size: 10px; margin:0">@if($u->email_verified_at) Verified @else Not Verified @endif</p>
                                                             </div>
+                                                            <div class="p-0 ms-3 mt-5" style="">
+                                                                <a class="btn btn-outline-primary" href="{{route('chatTo',$u->id)}}">Send Message</a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -88,6 +93,8 @@
                                             <td>{{ $u->user_data->last_name }}</td>
                                             <td>{{ $u->user_data->phone_number }}</td>
                                         </tr>
+
+                                        @endif
                                     @endforeach
                                 </tbody>
                             </table>

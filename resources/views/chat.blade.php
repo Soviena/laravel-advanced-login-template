@@ -9,9 +9,8 @@
                 </div>
                 <div class="container px-0">
                     <ul class="list-group list-group-flush">
-
                         @foreach ($chatUsers as $u)
-                        <li class="list-group-item px-0 btn btn-outline-secondary" onclick="window.location.href='{{route('chatTo',$u->id)}}'">
+                        <li class="list-group-item px-0 btn @if($aite->id == $u->id) btn-secondary @else btn-outline-secondary @endif" onclick="window.location.href='{{route('chatTo',$u->id)}}'">
                             <div class="row">
                                 <div class="col-2">
                                     <div class="avatar avatar-online">
@@ -29,7 +28,9 @@
                                 <div class="col-2">
                                     <div class="row">4:14 PM</div>
                                     <div class="row">
-                                        <span class="badge bg-danger badge-center rounded-pill float-right">5</span>
+                                        @if ($u->unread_count > 0 )
+                                            <span class="badge bg-danger badge-center rounded-pill float-right">{{$u->unread_count}}</span>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -61,11 +62,18 @@
 
                         @isset($messages)
                             @foreach ($messages as $m)
+                            @if ($m->from_id != $user->id)
+                                @php
+                                    $m->is_read = true;
+                                    $m->save();
+                                @endphp
+                            @endif
                             <div class="container @if($m->from_id == $user->id) text-end @endif">
                                 <div class="container">
                                     {{$m->chat->body}}
                                 </div>
                             </div>
+
                             @endforeach
                         @endisset
 

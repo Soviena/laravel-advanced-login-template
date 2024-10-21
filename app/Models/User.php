@@ -63,16 +63,26 @@ class User extends Authenticatable
     public function receivedChat(): HasManyThrough{
         return $this->hasManyThrough(Chat::class,UserChatUser::class, 'to_id','id','id','chat_id');
     }
+    public function sentChatUser(): HasMany{
+        return $this->HasMany(UserChatUser::class, 'from_id','id');
+    }
+    public function receivedChatUser(): HasMany{
+        return $this->HasMany(UserChatUser::class, 'to_id','id');
+    }
     public function chatUsers(): Collection{
         // Users where the current user is the sender (from_id) and the others are receivers (to_id)
         $usersFrom = User::whereHas('receivedChat', function($query) {
             $query->where('from_id', $this->id);
-        })->distinct()->get();
+        })->distinct()->withCount(['sentChatUser as unread_count' => function ($query) {
+            $query->where('to_id',$this->id)->where('is_read',false);
+        }])->get();
 
         // Users where the current user is the receiver (to_id) and the others are senders (from_id)
         $usersTo = User::whereHas('sentChat', function($query) {
             $query->where('to_id', $this->id);
-        })->distinct()->get();
+        })->distinct()->withCount(['sentChatUser as unread_count' => function ($query) {
+            $query->where('to_id',$this->id)->where('is_read',false);
+        }])->get();
 
         // Merge both collections and remove duplicates
         return $usersFrom->merge($usersTo)->unique('id');

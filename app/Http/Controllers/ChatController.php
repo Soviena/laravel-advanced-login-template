@@ -18,8 +18,9 @@ class ChatController extends Controller
     public function index(Request $request)
     {
         $user = Auth::user()->load('user_data');
+        $aite = $user;
         $chatUsers = $user->chatUsers();
-        return view('chat',compact('user','chatUsers'));
+        return view('chat',compact('user','chatUsers', 'aite'));
     }
     public function chat(Request $request, $toId)
     {
@@ -45,6 +46,7 @@ class ChatController extends Controller
         $userChatUser = new UserChatUser;
         $userChatUser->from_id = $user->id;
         $userChatUser->to_id = $request->to_id;
+        $userChatUser->chat_id = $chat->id;
         $userChatUser->chat_id = $chat->id;
         $userChatUser->save();
         return redirect()->back();

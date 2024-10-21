@@ -66,9 +66,9 @@
               <span class="menu-header-text">Divider Title</span>
             </li>
             <li class="menu-item @isset($page) @if($page['title'] == 'Menu 1') active @endif @endisset">
-              <a href=" " class="menu-link">
+              <a href="{{route('chat')}}" class="menu-link">
               <i class='menu-icon tf-icons bx bxs-book-content'></i>
-                <div data-i18n="Boxicons">Menu 1</div>
+                <div data-i18n="Boxicons">Chat</div>
               </a>
             </li>
           </ul>

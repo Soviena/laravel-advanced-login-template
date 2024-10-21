@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('chat_id')->references('id')->on('chats');
             $table->foreign('from_id')->references('id')->on('users');
             $table->foreign('to_id')->references('id')->on('users');
+            $table->boolean('is_read')->nullable()->default(false);
             $table->timestamps();
         });
     }

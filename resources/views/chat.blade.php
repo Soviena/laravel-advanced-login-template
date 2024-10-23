@@ -29,7 +29,7 @@
                                     <div class="row">4:14 PM</div>
                                     <div class="row">
                                         @if ($u->unread_count > 0 )
-                                            <span class="badge bg-danger badge-center rounded-pill float-right">{{$u->unread_count}}</span>
+                                            <span class="badge bg-danger badge-center rounded-pill float-right" id="unread-{{$u->id}}">{{$u->unread_count}}</span>
                                         @endif
                                     </div>
                                 </div>
@@ -93,8 +93,18 @@
         </div>
     </div>
 </div>
+<script>
+    @if($aite->id != $user->id)
+        setTimeout(() => {
+            window.Echo.private('chatToUser.{{$aite->id}}.{{$user->id}}')
+            .listen('gotMessage', (e) => {
+                console.log(e.chat);
+                console.log("Got Message");
+            });
+            console.log("Listening to chatToUser.{{$aite->id}}.{{$user->id}}");
+        }, 1000);
+
+    @endif
+</script>
 @endsection
 
-<script>
-
-</script>

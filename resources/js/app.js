@@ -20,6 +20,7 @@ import '../css/jquery.dataTables.min.css';
 import './helpers.js';
 import './perfect-scrollbar.js';
 import './menu.js';
+import './echo.js'
 // import './apexcharts.js';
 // import './main.js';
 // import './dashboards-analytics.js';

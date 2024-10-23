@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\sendMessage;
 use App\Models\Chat;
 use App\Http\Requests\StoreChatRequest;
 use App\Http\Requests\UpdateChatRequest;
@@ -49,6 +50,7 @@ class ChatController extends Controller
         $userChatUser->chat_id = $chat->id;
         $userChatUser->chat_id = $chat->id;
         $userChatUser->save();
+        sendMessage::dispatch($chat,$userChatUser);
         return redirect()->back();
     }
 

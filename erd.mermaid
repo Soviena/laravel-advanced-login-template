@@ -43,8 +43,6 @@ erDiagram
         string body
         string attachment
         string attachment_type
-        datetime created_at
-        datetime updated_at
     }
 
     USER_CHAT_USER {
@@ -52,6 +50,9 @@ erDiagram
         int chat_id FK
         int from_id FK
         int to_id FK
+        bool is_read
+        datetime created_at
+        datetime updated_at
     }
 
 

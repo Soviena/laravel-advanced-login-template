@@ -58,7 +58,7 @@
                 </div>
                 <hr>
                 <div class="row" style="max-height: 77vh; min-height: 77vh;">
-                    <div class="container">
+                    <div class="container" id="chat-body">
 
                         @isset($messages)
                             @foreach ($messages as $m)
@@ -84,8 +84,8 @@
                         <form method="POST" action="{{route('sendChat')}}">
                             @csrf
                             <input type="hidden" name="to_id" value="{{$aite->id}}">
-                            <input class="col-10 me-2" type="text" name="body" id="">
-                            <button class="col btn btn-primary" type="submit">Send</button>
+                            <input class="col-10 me-2" type="text" name="body" id="text-input">
+                            <button class="col btn btn-primary" type="submit" onclick="sendMessage()">Send</button>
                         </form>
                     </div>
                 @endisset
@@ -94,16 +94,51 @@
     </div>
 </div>
 <script>
+    var chatBody = document.getElementById('chat-body');
     @if($aite->id != $user->id)
         setTimeout(() => {
             window.Echo.private('chatToUser.{{$aite->id}}.{{$user->id}}')
             .listen('gotMessage', (e) => {
-                console.log(e.chat);
-                console.log("Got Message");
+                chatBody.insertAdjacentHTML('beforeend',`
+                    <div class="container">
+                        <div class="container">
+                            ${e.chat.body}
+                        </div>
+                    </div>
+                `)
             });
             console.log("Listening to chatToUser.{{$aite->id}}.{{$user->id}}");
         }, 1000);
 
+        const messageRequest = (text) => {
+            try {
+                $.post("{{route('sendChat')}}", {
+                    _token: '{{csrf_token()}}',
+                    to_id: '{{$aite->id}}',
+                    body: text
+                });
+                chatBody.insertAdjacentHTML('beforeend',`
+                    <div class="container">
+                        <div class="container text-end">
+                            ${text}
+                        </div>
+                    </div>
+                `)
+            } catch (err) {
+                console.log(err.message);
+            }
+        };
+        function sendMessage(){
+            event.preventDefault();
+            let TextInput = document.getElementById('text-input')
+            let message = TextInput.value
+            if (message.trim() === "") {
+                alert("Please enter a message!");
+                return;
+            }
+            messageRequest(message);
+            TextInput.value = ""
+        }
     @endif
 </script>
 @endsection

@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <hr>
-                <div class="row" style="max-height: 77vh; min-height: 77vh;">
+                <div class="row" style="max-height: 77vh; min-height: 77vh; overflow-y: scroll;">
                     <div class="container" id="chat-body">
 
                         @isset($messages)
@@ -80,7 +80,7 @@
                     </div>
                 </div>
                 @isset($aite)
-                    <div class="row mx-2 pb-2">
+                    <div class="row mx-2 pb-2 pt-5">
                         <form method="POST" action="{{route('sendChat')}}">
                             @csrf
                             <input type="hidden" name="to_id" value="{{$aite->id}}">

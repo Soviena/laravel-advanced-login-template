@@ -51,7 +51,7 @@ class ChatController extends Controller
         $userChatUser->chat_id = $chat->id;
         $userChatUser->save();
         sendMessage::dispatch($chat,$userChatUser);
-        return redirect()->back();
+        return "ok";
     }
 
     /**

@@ -36,6 +36,8 @@ return [
                 'tls' => [
                     'verify_peer' => false,
                     'allow_self_signed' => true,
+                    // 'local_cert' => env('CERT',""),
+                    // 'local_pk' => env('CERT_PK', "")
                 ],
             ],
             'max_request_size' => env('REVERB_MAX_REQUEST_SIZE', 10_000),

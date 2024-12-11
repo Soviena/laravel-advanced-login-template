@@ -1,0 +1,105 @@
+2024-12-10 16:07:46,178 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 16:07:46,250 [INFO] supervisor starting...
+2024-12-10 16:08:57,044 [INFO] supervisorctl shutdown
+2024-12-10 16:08:57,124 [ERROR] Error: .ini file does not include supervisorctl section
+2024-12-10 16:08:57,124 [ERROR] For help, use C:\Users\User\python_venv\supervisor\Lib\site-packages\supervisor\services.py -h
+2024-12-10 16:13:59,805 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 16:13:59,835 [INFO] supervisor starting...
+2024-12-10 16:14:26,850 [INFO] supervisorctl shutdown
+2024-12-10 16:14:26,860 [ERROR] Error: .ini file does not include supervisorctl section
+2024-12-10 16:14:26,860 [ERROR] For help, use C:\Users\User\python_venv\supervisor\Lib\site-packages\supervisor\services.py -h
+2024-12-10 16:16:22,439 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 16:16:22,473 [INFO] supervisor starting...
+2024-12-10 16:16:47,642 [INFO] supervisorctl shutdown
+2024-12-10 16:16:47,654 [ERROR] Error: .ini file does not include supervisorctl section
+2024-12-10 16:16:47,655 [ERROR] For help, use C:\Users\User\python_venv\supervisor\Lib\site-packages\supervisor\services.py -h
+2024-12-10 16:23:49,627 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 16:23:49,664 [INFO] supervisor starting...
+2024-12-10 16:24:15,830 [INFO] supervisorctl shutdown
+2024-12-10 16:24:15,840 [ERROR] Error: .ini file does not include supervisorctl section
+2024-12-10 16:24:15,840 [ERROR] For help, use C:\Users\User\python_venv\supervisor\Scripts\supervisor_service -h
+2024-12-10 16:27:29,030 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 16:27:29,062 [INFO] supervisor starting...
+2024-12-10 16:27:35,312 [INFO] supervisorctl shutdown
+2024-12-10 16:27:35,326 [ERROR] Error: .ini file does not include supervisorctl section
+2024-12-10 16:27:35,326 [ERROR] For help, use C:\Users\User\python_venv\supervisor\Scripts\supervisor_service -h
+2024-12-10 16:30:06,843 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 16:30:06,875 [INFO] supervisor starting...
+2024-12-10 16:30:18,490 [INFO] supervisorctl shutdown
+2024-12-10 16:30:18,498 [ERROR] Error: .ini file does not include supervisorctl section
+2024-12-10 16:30:18,498 [ERROR] For help, use C:\Users\User\python_venv\supervisor\Scripts\supervisor_service -h
+2024-12-10 16:36:09,599 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 16:36:09,628 [INFO] supervisor starting...
+2024-12-10 16:36:12,923 [INFO] supervisorctl shutdown
+2024-12-10 16:36:14,945 [INFO] Shut down
+2024-12-10 16:36:16,683 [INFO] supervisor shutdown
+2024-12-10 16:37:20,662 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 16:37:20,685 [INFO] supervisor starting...
+2024-12-10 17:03:19,715 [INFO] supervisorctl shutdown
+2024-12-10 17:03:21,732 [INFO] Shut down
+2024-12-10 17:03:23,382 [INFO] supervisor shutdown
+2024-12-10 17:03:24,105 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 17:03:24,145 [INFO] supervisor starting...
+2024-12-10 17:03:57,170 [INFO] supervisorctl shutdown
+2024-12-10 17:03:59,616 [INFO] Shut down
+2024-12-10 17:04:00,119 [INFO] supervisor shutdown
+2024-12-10 17:04:00,738 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 17:04:00,764 [INFO] supervisor starting...
+2024-12-10 17:04:19,650 [INFO] supervisorctl shutdown
+2024-12-10 17:04:22,080 [INFO] Shut down
+2024-12-10 17:04:22,584 [INFO] supervisor shutdown
+2024-12-10 17:04:35,677 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 17:04:35,715 [INFO] supervisor starting...
+2024-12-10 17:07:10,693 [INFO] supervisorctl shutdown
+2024-12-10 17:07:12,709 [INFO] Shut down
+2024-12-10 17:07:14,367 [INFO] supervisor shutdown
+2024-12-10 17:07:15,078 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 17:07:15,117 [INFO] supervisor starting...
+2024-12-10 17:09:51,828 [INFO] supervisorctl shutdown
+2024-12-10 17:09:54,005 [INFO] Shut down
+2024-12-10 17:09:55,663 [INFO] supervisor shutdown
+2024-12-10 17:09:56,155 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 17:09:56,177 [INFO] supervisor starting...
+2024-12-10 17:14:17,581 [INFO] supervisorctl shutdown
+2024-12-10 17:14:19,600 [INFO] Shut down
+2024-12-10 17:14:21,253 [INFO] supervisor shutdown
+2024-12-10 17:14:21,960 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 17:14:22,003 [INFO] supervisor starting...
+2024-12-10 17:14:55,777 [INFO] supervisorctl shutdown
+2024-12-10 17:14:57,795 [INFO] Shut down
+2024-12-10 17:14:59,512 [INFO] supervisor shutdown
+2024-12-10 17:15:00,163 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 17:15:00,200 [INFO] supervisor starting...
+2024-12-10 17:24:11,348 [INFO] supervisorctl shutdown
+2024-12-10 17:24:13,567 [INFO] Shut down
+2024-12-10 17:24:15,235 [INFO] supervisor shutdown
+2024-12-10 17:24:15,716 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-10 17:24:15,753 [INFO] supervisor starting...
+2024-12-11 08:35:22,517 [INFO] supervisorctl shutdown
+2024-12-11 08:35:24,670 [INFO] Shut down
+2024-12-11 08:35:26,415 [INFO] supervisor shutdown
+2024-12-11 08:36:42,432 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-11 08:36:42,485 [INFO] supervisor starting...
+2024-12-11 08:41:54,264 [INFO] supervisorctl shutdown
+2024-12-11 08:41:56,292 [INFO] Shut down
+2024-12-11 08:41:57,993 [INFO] supervisor shutdown
+2024-12-11 08:41:58,767 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-11 08:41:58,809 [INFO] supervisor starting...
+2024-12-11 08:45:42,761 [INFO] supervisorctl shutdown
+2024-12-11 08:45:44,781 [INFO] Shut down
+2024-12-11 08:45:46,536 [INFO] supervisor shutdown
+2024-12-11 08:45:47,231 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-11 08:45:47,298 [INFO] supervisor starting...
+2024-12-11 08:47:39,299 [INFO] supervisorctl shutdown
+2024-12-11 08:47:41,650 [INFO] Shut down
+2024-12-11 08:47:43,388 [INFO] supervisor shutdown
+2024-12-11 08:47:44,134 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-11 08:47:44,172 [INFO] supervisor starting...
+2024-12-11 08:53:04,295 [INFO] supervisorctl shutdown
+2024-12-11 08:53:06,438 [INFO] Shut down
+2024-12-11 08:53:08,143 [INFO] supervisor shutdown
+2024-12-11 08:53:08,701 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-11 08:53:08,754 [INFO] supervisor starting...
+2024-12-11 08:54:53,424 [INFO] supervisorctl shutdown
+2024-12-11 08:54:55,951 [INFO] Shut down
+2024-12-11 08:54:57,630 [INFO] supervisor shutdown

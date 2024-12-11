@@ -1,0 +1,2170 @@
+
+   INFO  Starting secure server on 0.0.0.0:8080 (localhost).  
+
+
+   INFO  Starting secure server on 0.0.0.0:8080 (localhost).  
+
+
+   INFO  Starting secure server on 0.0.0.0:8080 (localhost).  
+
+
+   INFO  Starting secure server on 0.0.0.0:8080 (localhost).  
+
+
+   INFO  Starting secure server on 0.0.0.0:8080 (localhost).  
+
+
+   INFO  Starting secure server on 0.0.0.0:8080 (localhost).  
+
+
+   INFO  Starting secure server on 0.0.0.0:8080 (localhost).  
+
+
+   INFO  Starting secure server on 0.0.0.0:8080 (localhost).  
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   INFO  Starting secure server on 0.0.0.0:8080 (localhost).  
+
+
+   INFO  Starting secure server on 0.0.0.0:8080 (localhost).  
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   InvalidArgumentException 
+
+  Given URI "tcp://localhost:8080" does not contain a valid host IP (EINVAL)
+
+  at C:\Apache24\Web\login\vendor\react\socket\src\TcpServer.php:168
+    164▕             );
+    165▕         }
+    166▕ 
+    167▕         if (@\inet_pton(\trim($parts['host'], '[]')) === false) {
+  ➜ 168▕             throw new \InvalidArgumentException(
+    169▕                 'Given URI "' . $uri . '" does not contain a valid host IP (EINVAL)',
+    170▕                 \defined('SOCKET_EINVAL') ? \SOCKET_EINVAL : (\defined('PCNTL_EINVAL') ? \PCNTL_EINVAL : 22)
+    171▕             );
+    172▕         }
+
+  1   C:\Apache24\Web\login\vendor\react\socket\src\SocketServer.php:65
+      React\Socket\TcpServer::__construct("tcp://localhost:8080", Object(React\EventLoop\StreamSelectLoop), [])
+
+  2   C:\Apache24\Web\login\vendor\laravel\reverb\src\Servers\Reverb\Factory.php:60
+      React\Socket\SocketServer::__construct("tls://localhost:8080", [], Object(React\EventLoop\StreamSelectLoop))
+
+
+   INFO  Starting secure server on 127.0.0.1:8080 (localhost).  
+
+
+   INFO  Starting secure server on 127.0.0.1:8080 (localhost).  
+

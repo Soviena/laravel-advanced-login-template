@@ -3,17 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Models\UserData;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\OldPassword;
 use Illuminate\Support\Facades\Auth;
 use DateTime;
 use DateInterval;
+use Illuminate\Support\ItemNotFoundException;
+use Log;
+use PHPGangsta_GoogleAuthenticator;
 
 
 class UserController extends Controller
 {
+    public function twoFA(Request $request){
+        $uid = $request->get('id');
+        return view('2fa', compact('uid'));
+    }
     public function create(Request $request){
         if ($request->password != $request->confirm_password) {
             return back()->with(["error" => "Konfirmasi password salah"]);
@@ -74,13 +83,21 @@ class UserController extends Controller
             return back()->withErrors(["blocked" => "Akun anda di blokir"]);
         }
         $remember = $request->has('remember');
-
-        if (Auth::attempt([$field => $request->email, 'password' => $request->password], $remember)) {
+        if (password_verify($request->password, $u->password)) {
             $u->consecutive_login_end_at = $oneHourLater;
-            $u->save();
+            // $user->save();
+            // return redirect()->route("2fa", ['id' => $u->id]);
+            Auth::login($u);
             return redirect()->route("index");
-            // Meneruskan ke route utama
         }
+        // return redirect('/2fa', $user->id);
+
+        // if (Auth::attempt([$field => $request->email, 'password' => $request->password], $remember)) {
+        //     $u->consecutive_login_end_at = $oneHourLater;
+        //     $u->save();
+        //     return redirect()->route("index");
+        //     // Meneruskan ke route utama
+        // }
 
         if (is_null($u->consecutive_login_end_at)) {
             $u->consecutive_login_end_at = $oneHourLater;
@@ -153,5 +170,31 @@ class UserController extends Controller
     public function logOut(Request $request){
         Auth::logout();
         return redirect('/login')->with('success', 'You have been logged out.');
+    }
+
+    public function generateRenew2FA(Request $request, $id){
+        try {
+            $user = User::findOrFail($id);
+        } catch (\Throwable $th) {
+            return response(null,403);
+        }
+        $ga = new PHPGangsta_GoogleAuthenticator();
+        $secret = $ga->createSecret();
+        $qrcode = $ga->getQRCodeGoogleUrl($id,$secret);
+        $user->secret = Crypt::encryptString($secret);
+        $user->save();
+        return response()->json($qrcode);
+    }
+
+    public function verify2fa(Request $request ,$id){
+        $user = User::find($id);
+        $code = $request->input('code');
+        $secret = Crypt::decryptString($user->secret);
+        $ga = new PHPGangsta_GoogleAuthenticator();
+        if ($ga->verifyCode($secret, $code, 0)){
+            Auth::login($user);
+            return redirect()->route("index");
+        }
+        return redirect('/login');
     }
 }

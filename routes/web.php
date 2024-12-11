@@ -27,10 +27,13 @@ Route::group(['middleware' => 'auth'],function () {
     Route::get('/logout', [UserController::class, 'logOut'])->name('logout');
 });
 Route::middleware('guest')->group(function(){
+    Route::post('/user/{id}/generate2fa',[UserController::class, 'generateRenew2FA'])->name('generate2fa');
+    Route::post('/user/{id}/verify',[UserController::class, 'verify2fa'])->name('verify');
     Route::get('/login', [UserController::class, 'login'])->name('login');
     Route::post('/login', [UserController::class, 'loginFunc'])->name('loginFunc');
     Route::get('/register', [UserController::class, 'register'])->name('register');
     Route::post('/register',  [UserController::class, 'create'])->name('createUser');
+    Route::get('/2fa', [UserController::class, 'twoFA'])->name('2fa');
 });
 
 Route::get('/password/reset', 'App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');

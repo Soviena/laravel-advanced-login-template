@@ -183,9 +183,7 @@ class UserController extends Controller
         $ga = new PHPGangsta_GoogleAuthenticator();
         $secret = $ga->createSecret();
         $qrcode = $ga->getQRCodeGoogleUrl("simple-login-2fa",$secret);
-        log::debug($secret);
         $user->secret = Crypt::encryptString($secret);
-        log::debug($user->secret);
         $user->save();
         return response()->json($qrcode);
     }
@@ -195,14 +193,11 @@ class UserController extends Controller
         $code = $request->input('code');
         try {
             $secret = Crypt::decryptString($user->secret);
-            log::debug($secret);
         } catch (Exception $e) {
             return redirect()->back();
         }
         $ga = new PHPGangsta_GoogleAuthenticator();
-        log::info($code);
-        log::info($ga->getCode($secret));
-        if ($ga->verifyCode($secret, $code, 2)){
+        if ($ga->verifyCode($secret, $code, 0)){
             Auth::login($user);
             return redirect()->route("index");
         }

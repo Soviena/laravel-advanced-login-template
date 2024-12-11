@@ -178,6 +178,9 @@
                     <span class="text-danger">{{ $message }}</span>
                   @enderror
                 </div>
+                <div class="mb-3 col-md-6">
+                    <img src="" alt="" srcset="" id="qrcode">
+                  </div>
               </div>
               <div class="d-flex row mt-2 justify-content-between">
                 {{-- @if(Auth::user()->email_verified_at == '')
@@ -189,6 +192,9 @@
                 </div>
                 <div class="col-4">
                     <button type="button" id="deleteButton-credential" class="btn btn-danger me-2" onclick="">Delete Account</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" id="deleteButton-credential" class="btn btn-secondary me-2" onclick="generate2fa()">Activate / Renew 2FA Key</button>
                 </div>
               </div>
             </div>
@@ -800,6 +806,20 @@ function getImgURL(url, callback){
 
             resultDiv.textContent = `Strength: ${strength}`;
             tipsDiv.innerHTML = tips.join('<br/>');
+        }
+
+        async function generate2fa(){
+            console.log("CLICK");
+            try {
+                let response = await $.post("{{route('generate2fa',Auth::user()->id)}}", {
+                    _token: '{{csrf_token()}}',
+                });
+                let img = document.getElementById('qrcode')
+                img.src = response
+            } catch (err) {
+                console.log(err.message);
+            }
+
         }
 </script>
 

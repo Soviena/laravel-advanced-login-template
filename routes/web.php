@@ -27,7 +27,6 @@ Route::group(['middleware' => 'auth'],function () {
     Route::get('/logout', [UserController::class, 'logOut'])->name('logout');
 });
 Route::middleware('guest')->group(function(){
-    Route::post('/user/{id}/generate2fa',[UserController::class, 'generateRenew2FA'])->name('generate2fa');
     Route::post('/user/{id}/verify',[UserController::class, 'verify2fa'])->name('verify');
     Route::get('/login', [UserController::class, 'login'])->name('login');
     Route::post('/login', [UserController::class, 'loginFunc'])->name('loginFunc');
@@ -41,3 +40,5 @@ Route::post('/password/email', 'App\Http\Controllers\Auth\ForgotPasswordControll
 Route::get('/password/reset/{token}', 'App\Http\Controllers\Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('/password/reset', 'App\Http\Controllers\Auth\ResetPasswordController@reset')->name('password.update');
 Route::get('/web/email/verify/resend/{uid}', [EmailVerificationController::class, 'resendW'])->name('resendVerify');
+Route::post('/user/{id}/generate2fa',[UserController::class, 'generateRenew2FA'])->name('generate2fa');
+

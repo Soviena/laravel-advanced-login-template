@@ -85,10 +85,12 @@ class UserController extends Controller
         $remember = $request->has('remember');
         if (password_verify($request->password, $u->password)) {
             $u->consecutive_login_end_at = $oneHourLater;
-            // $user->save();
-            // return redirect()->route("2fa", ['id' => $u->id]);
-            Auth::login($u);
-            return redirect()->route("index");
+            $u->save();
+            if (is_null($u->secret)) {
+                Auth::login($u);
+                return redirect()->route("index");
+            }
+            return redirect()->route("2fa", ['id' => $u->id]);
         }
         // return redirect('/2fa', $user->id);
 
@@ -175,13 +177,15 @@ class UserController extends Controller
     public function generateRenew2FA(Request $request, $id){
         try {
             $user = User::findOrFail($id);
-        } catch (\Throwable $th) {
+        } catch (Exception $e) {
             return response(null,403);
         }
         $ga = new PHPGangsta_GoogleAuthenticator();
         $secret = $ga->createSecret();
-        $qrcode = $ga->getQRCodeGoogleUrl($id,$secret);
+        $qrcode = $ga->getQRCodeGoogleUrl("simple-login-2fa",$secret);
+        log::debug($secret);
         $user->secret = Crypt::encryptString($secret);
+        log::debug($user->secret);
         $user->save();
         return response()->json($qrcode);
     }
@@ -189,12 +193,19 @@ class UserController extends Controller
     public function verify2fa(Request $request ,$id){
         $user = User::find($id);
         $code = $request->input('code');
-        $secret = Crypt::decryptString($user->secret);
+        try {
+            $secret = Crypt::decryptString($user->secret);
+            log::debug($secret);
+        } catch (Exception $e) {
+            return redirect()->back();
+        }
         $ga = new PHPGangsta_GoogleAuthenticator();
-        if ($ga->verifyCode($secret, $code, 0)){
+        log::info($code);
+        log::info($ga->getCode($secret));
+        if ($ga->verifyCode($secret, $code, 2)){
             Auth::login($user);
             return redirect()->route("index");
         }
-        return redirect('/login');
+        return redirect()->back();
     }
 }

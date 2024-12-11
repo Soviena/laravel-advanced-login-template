@@ -103,3 +103,5 @@
 2024-12-11 08:54:53,424 [INFO] supervisorctl shutdown
 2024-12-11 08:54:55,951 [INFO] Shut down
 2024-12-11 08:54:57,630 [INFO] supervisor shutdown
+2024-12-11 08:54:58,260 [INFO] supervisor config path: C:\Apache24\Web\login\supervisord.conf
+2024-12-11 08:54:58,294 [INFO] supervisor starting...

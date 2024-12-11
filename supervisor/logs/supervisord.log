@@ -543,3 +543,8 @@
 2024-12-11 08:54:56,626 INFO waiting for laravel_reverb to die
 2024-12-11 08:54:57,126 WARN stopped: laravel_reverb (exit status 1)
 2024-12-11 08:54:57,627 INFO exit now...
+2024-12-11 08:54:58,360 INFO process group added: 'laravel-reverb'
+2024-12-11 08:54:58,375 INFO RPC interface 'supervisor' initialized
+2024-12-11 08:54:58,376 INFO supervisord started with pid 19564
+2024-12-11 08:54:58,886 INFO Spawned: 'laravel_reverb' with pid 21132
+2024-12-11 08:54:59,900 INFO success: laravel_reverb entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
